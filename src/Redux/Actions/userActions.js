@@ -1,6 +1,6 @@
-export const saveUserToState = (userInfo) =>{
+export const saveUserToState = (user) =>{
  return {
    type: "SAVE_USER",
-   payload: userInfo
+   payload: user
  }
 }

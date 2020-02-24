@@ -16,7 +16,12 @@ class UserForm extends Component {
 
   handleSubmit=(evt)=>{
     evt.preventDefault()
-    this.props.handleLogin(this.state)
+    if(this.props.formType === "login"){
+      this.props.handleLogin(this.state)
+    } else if (this.props.formType === "register") {
+      this.props.handleRegister(this.state)
+    }
+
   }
 
 
@@ -24,7 +29,7 @@ class UserForm extends Component {
     return (
       <div>
         <form className="user-form" onSubmit={this.handleSubmit}>
-          <h1>login</h1>
+          <h1>{this.props.formType === "login" ? "login" : "register"}</h1>
           <label htmlFor="username">Username:</label><br/>
             <input
               type="text"
@@ -32,13 +37,15 @@ class UserForm extends Component {
               name="username"
               value={this.state.username}
               onChange={this.handleAllChange}/><br/>
-
+            { this.props.formType !== "login" ?
+              <div>
             <label htmlFor="email">e-mail:</label><br/>
               <input type="email"
                 autoComplete="off"
                 name="email"
                 value={this.state.email}
                 onChange={this.handleAllChange}/><br/>
+            </div> : null }
 
             <label htmlFor="password">Password:</label><br/>
             <input type="password"
