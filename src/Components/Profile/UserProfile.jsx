@@ -11,6 +11,7 @@ class UserProfile extends Component {
     })
     .then(r => r.json())
     .then((deleteUser) => {
+      localStorage.clear()
       this.props.saveUserToState({user: {}, token: ""})
       this.props.history.push('/')
       // console.log(deleteUser);

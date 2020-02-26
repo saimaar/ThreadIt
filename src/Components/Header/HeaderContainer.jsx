@@ -5,10 +5,13 @@ import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import {saveUserToState} from '../../Redux/Actions/userActions'
 import { Input, Menu, Segment } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 //withRouter is giving us access to the DOM history and route info
 //so that we can manipulate the path ex line 16
 
 class HeaderContainer extends Component {
+
+  state = { activeItem: 'home' }
 
   handleLogout=()=>{
 
@@ -17,15 +20,23 @@ class HeaderContainer extends Component {
     this.props.history.push('/')
   }
 
+  handleCart=()=>{
+    this.props.history.push('/shoppingCart')
+  }
+
+
+
+
   render() {
+
     // console.log(this.props);
 // console.log(this.props.user.username);
     return (
 
-        <div className="main-header">
-          <div className="header-content">
-            <div className="top-menu">
+        <Segment className="main-header">
+          thread it
               <ul className="menu-right">
+                <Icon onClick={this.handleCart} name='cart' size='large' />
                 <Dropdown
                     text={this.props.user.username ? `Hey ${this.props.user.username}!` : "Hey User!" }
                     icon='user'
@@ -41,10 +52,8 @@ class HeaderContainer extends Component {
                     </Dropdown.Menu>
                   </Dropdown>
               </ul>
-            </div>
-          </div>
-          mainDivHeader
-        </div>
+            
+        </Segment>
 
     );
   }

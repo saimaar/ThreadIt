@@ -7,7 +7,6 @@ class AllItemContainer extends Component {
   render() {
     return (
       <div>
-        AllItemContainer
       <ImgContainer/>
       <SideBarContainer/>
       </div>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ImgCard from './ImgCard'
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
+import {Card} from 'semantic-ui-react'
+
 
 class ImgContainer extends Component {
 
@@ -10,12 +12,11 @@ class ImgContainer extends Component {
     let {name, id} = this.props.items
     // console.log(this.props.items);
     let imgCard = this.props.items.map(item =>
-        <Link key={item.id} to={`/${item.name}/${item.id}`}><ImgCard item={item}/>)</Link>)
+        <Link key={item.id} to={`/${item.name}/${item.id}`}><ImgCard item={item}/></Link>)
     return (
-      <div className="img-containe">{imgCard}</div>
+        <Card.Group itemsPerRow={6}>{imgCard}</Card.Group>
     );
   }
-
 }
 
 

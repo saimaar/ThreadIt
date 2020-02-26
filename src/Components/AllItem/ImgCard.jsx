@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react'
+import { Grid, Card, Image } from 'semantic-ui-react'
+
 class ImgCard extends Component {
 
   render() {
-    let {image} = this.props.item
-    console.log(this.props.item);
+    let {image, price} = this.props.item
+    // console.log(this.props.item);
     return (
-      <div className="img-card">
+      <Card className="item-card">
+                <Image src={image} alt="default image" wrapped ui={false}/>
+                <Card.Content>
+                    <Card.Header></Card.Header>
+                </Card.Content>
+                <Card.Content extra>
+                    <p>Price:</p>
+                    <b>{price}</b>
+                </Card.Content>
+</Card>
 
-          <Card.Group itemsPerRow={4}>
-             <Card color='teal' image={image} />
-          </Card.Group>
 
-
-      </div>
     );
   }
 

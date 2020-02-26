@@ -5,23 +5,45 @@
 .main-header {
   height: 15vw;
   display: block;
-  background: #FFFFF0
 }
-.header-content{
+/* .header-content{
   padding: 20px 0px 0;
   text-align: center;
   max-width: 1148px;
-}
-.top-menu{
   position: absolute;
   right: 32px;
   top: 26px;
+} */
+/* .top-menu{
+  position: absolute;
+  right: 32px;
+  top: 26px;
+} */
+
+/* menu */
+.ui.secondary.menu {
+    margin-left: 20vw !important;
+    margin-top: 9vw !important;
+    margin-right: 30vw !important;
+
+}
+
+.ui.secondary.menu .item {
+  padding: .78571429em 4.928571em !important;
+  margin: 0 .35714286em !important;
+
 }
 
 .menu-right{
   display: block;
   list-style: none;
   text-align: left;
+  padding: 20px 0px 0;
+  text-align: center;
+  max-width: 1148px;
+  position: absolute;
+  right: 32px;
+  top: 26px;
 }
 /* MODAL */
 .ui.modal{
@@ -36,3 +58,36 @@
   width: 100%;
   padding: 7vw 4vw;
 }
+
+
+
+/* NavBar */
+.ui[class*="top attached"].menu{
+  margin-top: 10vw !important;
+}
+
+/* cart */
+i.icon.cart:before {
+    margin-left: -4vw !important;
+}
+
+/* homepage image */
+img.ui.image {
+  margin: 2vw !important
+}
+
+/* all items images card */
+
+.ui.card:last-child {
+  margin-bottom: 2vw !important;
+  margin-right: 4vw !important;
+}
+
+.ui.six.cards {
+margin-left: 15.25em !important;
+margin-right: -.75em !important;
+}
+
+.ui.cards {
+    margin: 4.125em 0.5em !important;
+  }
