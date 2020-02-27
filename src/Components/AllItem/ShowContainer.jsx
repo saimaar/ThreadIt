@@ -3,6 +3,7 @@ import ImgCard from './ImgCard'
 import {connect} from 'react-redux';
 import { Button, Icon } from 'semantic-ui-react'
 import {addToCart} from '../../Redux/Actions/cartItemAction'
+import {Link} from 'react-router-dom'
 
 class ShowContainer extends Component {
   state = {
@@ -27,6 +28,7 @@ class ShowContainer extends Component {
   )
   .then(r => r.json())
   .then((item) => {
+    console.log(item);
     this.props.addToCart(item);
     })
   }
@@ -46,13 +48,14 @@ class ShowContainer extends Component {
     })
   }
 
+// in this Add to cart if the localStorage is empty should force the user to log in
   render() {
     // debugger
     return (
       <div>
-          <ImgCard item={this.state}/>
-          <Button onClick={this.handleAddToCart} color='google plus'>
-              Add to Cart
+          <ImgCard cardType="show-container" item={this.state}/>
+          <Button disabled={!localStorage.token ? true : false} onClick={this.handleAddToCart} color='google plus'>
+              {localStorage.token ? "Add To Cart" : "Log in to add to cart!"}
           </Button>
       </div>
     );
@@ -68,8 +71,7 @@ const mapStateToProps=(state)=>{
   // debugger
   // console.log(state.userInfo.user.cart);
   return{
-    cart_id : state.userInfo.user.cart.id,
-  
+    cart_id : state.userInfo.user.cart ? state.userInfo.user.cart.id : null ,
   }
 
 

@@ -28,16 +28,14 @@ class ProductInfo extends Component {
 
     let {name, price, image} = this.props.cartItem
     return (
-      <div>
-      <Segment.Group>
-        <Segment>
-          <Image src={`${image}`} size="small"/>
-          product name: <p>{name}</p>
-          price: <p>${price}</p>
-        <Button onClick={this.handleDelete} basic color='red' content='Delete' />
-        </Segment>
-      </Segment.Group>
-      </div>
+    <Segment className="product-info">
+      <Image src={`${image}`} size="small"/>
+        product name: <p>{name}</p>
+        price: <p>${price}</p>
+      <Button onClick={this.handleDelete} basic color='red' content='Delete' />
+
+    </Segment>
+
     );
   }
 

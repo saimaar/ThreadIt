@@ -17,12 +17,12 @@ const userReducer = (state = initialUserState, action) =>{
       }}
       case 'REMOVE_ITEM':
       // debugger
-      console.log(state.user.cart);
-      console.log(action.payload);
+      // console.log(state.user.cart);
+      // console.log(action.payload);
       // debugger
        let filteredCart = state.user.cart_items.filter(cartItem => cartItem.cart_item_id !== action.payload)
 
-       console.log(filteredCart);
+       // console.log(filteredCart);
         return {...state, user: {...state.user, cart_items: filteredCart} }
     default:
     return state

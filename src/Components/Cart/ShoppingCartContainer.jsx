@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ProductInfo from './ProductInfo'
+import CheckoutInfoCard from './CheckoutInfoCard'
 import {connect} from 'react-redux';
+import {Grid, Column} from 'semantic-ui-react'
+
 
 
 class ShoppingCartContainer extends Component {
@@ -10,8 +13,15 @@ class ShoppingCartContainer extends Component {
 
     let productInfo = this.props.cart_items ? this.props.cart_items.map(cartItem => <ProductInfo cartItem ={cartItem}/>) : null
     return (
-      <div>This is Shopping Cart
-        {productInfo}
+      <div>Your Shopping Cart
+            <Grid columns={2} relaxed='very'>
+              <Grid.Column>
+                {productInfo}
+              </Grid.Column>
+              <Grid.Column>
+                <CheckoutInfoCard/>
+              </Grid.Column>
+            </Grid>
       </div>
     );
   }

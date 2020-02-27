@@ -6,6 +6,8 @@ import { withRouter } from 'react-router-dom'
 import {saveUserToState} from '../../Redux/Actions/userActions'
 import { Input, Menu, Segment } from 'semantic-ui-react'
 import { Icon } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+import logo from './logo.jpg'
 //withRouter is giving us access to the DOM history and route info
 //so that we can manipulate the path ex line 16
 
@@ -34,7 +36,7 @@ class HeaderContainer extends Component {
     return (
 
         <Segment className="main-header">
-          thread it
+              <Link to={`/`}><img className="logo" src={logo}/></Link>
               <ul className="menu-right">
                 <Icon onClick={this.handleCart} name='cart' size='large' />
                 <Dropdown
@@ -52,7 +54,7 @@ class HeaderContainer extends Component {
                     </Dropdown.Menu>
                   </Dropdown>
               </ul>
-            
+
         </Segment>
 
     );

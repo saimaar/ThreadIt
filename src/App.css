@@ -20,19 +20,10 @@
   top: 26px;
 } */
 
-/* menu */
-.ui.secondary.menu {
-    margin-left: 20vw !important;
-    margin-top: 9vw !important;
-    margin-right: 30vw !important;
-
+.logo{
+    width: 23vw;
 }
 
-.ui.secondary.menu .item {
-  padding: .78571429em 4.928571em !important;
-  margin: 0 .35714286em !important;
-
-}
 
 .menu-right{
   display: block;
@@ -60,17 +51,6 @@
 }
 
 
-
-/* NavBar */
-.ui[class*="top attached"].menu{
-  margin-top: 10vw !important;
-}
-
-/* cart */
-i.icon.cart:before {
-    margin-left: -4vw !important;
-}
-
 /* homepage image */
 img.ui.image {
   margin: 2vw !important
@@ -91,3 +71,22 @@ margin-right: -.75em !important;
 .ui.cards {
     margin: 4.125em 0.5em !important;
   }
+
+/* Show Container */
+
+.show-container{
+
+}
+
+
+/* shoppingCart */
+.ui.segment.product-info {
+    margin-left: 7vw;
+    margin-right: -11vw;
+  }
+
+.ui.segment.total-card{
+  margin-left: 9vw;
+  margin-right: 5vw;
+  background-color: aliceblue;
+}
