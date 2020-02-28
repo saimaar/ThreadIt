@@ -8,7 +8,7 @@ class ProductInfo extends Component {
 
   handleDelete=()=>{
     // console.log('click me');
-    fetch(`http://localhost:4000//cartitem/delete/${this.props.cartItem.id}`, {
+    fetch(`http://localhost:4000/cartitem/delete/${this.props.cartItem.id}`, {
       method : 'DELETE',
       headers: {
           'Authorization': `bearer ${localStorage.token}`

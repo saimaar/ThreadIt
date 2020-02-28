@@ -12,3 +12,10 @@ export const deleteFromCart = (id)=>{
     payload: id
   }
 }
+
+export const totalcartAmount = (price) =>{
+  return {
+    type: "Total",
+    payload: price
+  }
+}

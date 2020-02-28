@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {Segment, Button} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import {totalcartAmount} from '../../Redux/Actions/cartItemAction'
 
 
 class CheckoutInfoCard extends Component {
@@ -11,7 +12,9 @@ class CheckoutInfoCard extends Component {
       let price = this.props.userCart.map(cartItem => cartItem.price)
       // console.log(price);
       let totalPrice = price.reduce((total, num) => total + num)
-      return totalPrice
+      let result = totalPrice + 10
+          this.props.totalcartAmount(result)
+          return result
     }
   }
 
@@ -30,8 +33,8 @@ class CheckoutInfoCard extends Component {
       })
     })
       .then(r => r.json())
-      .then((data) => {
-        console.log(data);
+      .then((orderData) => {
+        console.log(orderData);
       })
   }
 
@@ -40,10 +43,11 @@ class CheckoutInfoCard extends Component {
 
 
   render() {
-    const totalPrice= this.cartAmount()
     const shipping = 10
-    let totalAmount = shipping + totalPrice
+    let totalAmount = this.cartAmount()
+    let totalPrice = totalAmount - 10
     totalAmount = totalAmount ? totalAmount: totalAmount = "0"
+    totalPrice = totalPrice ? totalPrice : totalPrice = "0"
     return (
 
       <Segment className = "total-card">
@@ -61,11 +65,13 @@ class CheckoutInfoCard extends Component {
 
 const mapStateToProps=(state)=>{
   // debugger
-
+  //put price in the state
+  //and then call the action here
   return {
     userCart : state.userInfo.user.cart_items,
-    user: state.userInfo.user
+    user: state.userInfo.user,
+
   }
 }
 
-export default connect(mapStateToProps)(CheckoutInfoCard);
+export default connect(mapStateToProps, {totalcartAmount})(CheckoutInfoCard);
