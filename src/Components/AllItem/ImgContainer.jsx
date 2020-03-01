@@ -23,7 +23,7 @@ class ImgContainer extends Component {
 
 const mapStateToProps = (state) => {
 // console.log(state.items);
-  debugger
+  // debugger
   return {
     items: state.items
   }

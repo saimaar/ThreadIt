@@ -118,11 +118,9 @@ class App extends Component {
 
 }
 
-const mapStateToProps=(state)=>{
-  // console.log(state);
-}
+
                               //dispatching action here === mapDispatchToProps
-export default connect(mapStateToProps,
+export default connect(null,
    {renderItems,
   saveUserToState} )
   (withRouter(App));

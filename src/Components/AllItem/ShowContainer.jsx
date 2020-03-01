@@ -13,13 +13,14 @@ import {addReviewToState} from '../../Redux/Actions/renderItems'
 class ShowContainer extends Component {
 
   state = {
-    showModal: false
+     showModal: false
   }
 
 // in this method, I am creating cart-item for the user
 //meaning the item that is selected by the user, will be attached to its
 //associate cart
   handleAddToCart=()=>{
+    // debugger
     let item_id = this.props.match.params.id
     fetch(`http://localhost:4000/cart_items`, {
       method : "POST",
@@ -120,7 +121,7 @@ const mapDispatchToprops = {
 }
 
 const mapStateToProps=(state)=>{
-  debugger
+  // debugger
   // console.log(state.userInfo.user.cart);
   return{
     cart_id : state.userInfo.user.cart ? state.userInfo.user.cart.id : null,

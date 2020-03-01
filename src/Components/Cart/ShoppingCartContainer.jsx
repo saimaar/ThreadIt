@@ -29,7 +29,7 @@ class ShoppingCartContainer extends Component {
 }
 
 const mapStateToProps =(state)=>{
-  // debugger
+  
   // console.log(state.userInfo.user.cart);
   return {
     cart_items: state.userInfo.user.cart_items

@@ -19,6 +19,7 @@ const userReducer = (state = initialUserState, action) =>{
       }
 
     case 'REMOVE_ITEM':
+
       let filteredCart = state.user.cart_items.filter(cartItem => cartItem.cart_item_id !== action.payload)
        // console.log(filteredCart);
       return {...state, user: {...state.user, cart_items: filteredCart}
