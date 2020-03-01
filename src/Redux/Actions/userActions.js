@@ -4,3 +4,11 @@ export const saveUserToState = (user) =>{
    payload: user
  }
 }
+
+export const addOrderItem = (order) =>{
+  return {
+    type: "ADD_ORDER",
+    payload: order
+
+  }
+}

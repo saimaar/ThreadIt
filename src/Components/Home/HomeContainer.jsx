@@ -10,7 +10,7 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <Image onClick={this.handleHomeImage} src="https://us.anitadongre.com/media/homepage_content/m/o/mobile-dhaaga-new1.jpg.mst.webp"/>
+        <Image className="home-image" onClick={this.handleHomeImage} src="https://us.anitadongre.com/media/homepage_content/m/o/mobile-dhaaga-new1.jpg.mst.webp"/>
       </div>
     );
   }

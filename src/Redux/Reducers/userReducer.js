@@ -16,14 +16,22 @@ const userReducer = (state = initialUserState, action) =>{
         cart_items: [...state.user.cart_items, action.payload.item]
       }}
       case 'REMOVE_ITEM':
-      // debugger
-      // console.log(state.user.cart);
-      // console.log(action.payload);
-      // debugger
        let filteredCart = state.user.cart_items.filter(cartItem => cartItem.cart_item_id !== action.payload)
-
        // console.log(filteredCart);
         return {...state, user: {...state.user, cart_items: filteredCart} }
+        //adding order to the order items
+      case "ADD_ORDER" :
+        return {...state, user: {
+          ...state.user,
+          orders: [...state.user.orders, action.payload]
+        }}
+        case "EMPTY_CART":
+        return {...state, user: {
+            ...state.user,
+            cart_items: []
+          }}
+
+
     default:
     return state
   }
