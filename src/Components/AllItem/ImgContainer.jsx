@@ -12,7 +12,7 @@ class ImgContainer extends Component {
     let {name, id} = this.props.items
     // console.log(this.props.items);
     let imgCard = this.props.items.map(item =>
-        <Link key={item.id} to={`/${item.name}/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
     return (
         <Card.Group itemsPerRow={6}>{imgCard}</Card.Group>
     );
@@ -23,6 +23,7 @@ class ImgContainer extends Component {
 
 const mapStateToProps = (state) => {
 // console.log(state.items);
+  debugger
   return {
     items: state.items
   }

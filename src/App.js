@@ -107,7 +107,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render= {() => <HomeContainer/>}/>
           <Route path='/items' component= { AllItemContainer }/>
-          <Route path= '/:name/:id' component ={ShowContainer}/>
+          <Route path= '/item/:id' component ={ShowContainer}/>
           <Route path= '/profile' component= {UserProfile}/>
           <Route path= '/shoppingCart'component={ShoppingCartContainer}/>
           <Route path= '/orders'component={OrderContainer}/>
@@ -120,9 +120,6 @@ class App extends Component {
 
 const mapStateToProps=(state)=>{
   // console.log(state);
-  return {
-
-  }
 }
                               //dispatching action here === mapDispatchToProps
 export default connect(mapStateToProps,
