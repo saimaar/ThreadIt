@@ -8,6 +8,7 @@ import { Input, Menu, Segment } from 'semantic-ui-react'
 import { Icon } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import logo from './logo.jpg'
+import NavBar from './NavBar'
 //withRouter is giving us access to the DOM history and route info
 //so that we can manipulate the path ex line 16
 
@@ -50,10 +51,12 @@ class HeaderContainer extends Component {
                     <Dropdown.Menu>
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType='login' handleLogin={this.props.handleLogin}/></Dropdown.Item> : null}
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType ='register' handleRegister={this.props.handleRegister}/></Dropdown.Item> : null}
-                        {localStorage.token  ? <Dropdown.Item onClick={this.handleLogout}>logout</Dropdown.Item> : null}
+                        {localStorage.token  ? <Dropdown.Item className="logout-link" onClick={this.handleLogout}>logout</Dropdown.Item> : null}
+                        {localStorage.token  ? <Link to='/profile'><Dropdown.Item className="profile-link">Profile</Dropdown.Item></Link> : null}
                     </Dropdown.Menu>
                   </Dropdown>
               </ul>
+              <NavBar/>
 
         </Segment>
 
