@@ -21,7 +21,7 @@
     box-shadow: none;
 
 }
-
+/* cart icon */
 i.icon.cart:before {
     content: "\f07a";
     margin-left: -4vw;
@@ -29,6 +29,15 @@ i.icon.cart:before {
 
 .ui.secondary.menu .item{
   padding: 2vw
+}
+
+/* side bar  */
+.ui.text.vertical.menu {
+    position: fixed;
+    margin-left: 3vw;
+    margin-top: -67vw;
+    width: 16rem;
+    float: left;
 }
 
 .item.profile-link{

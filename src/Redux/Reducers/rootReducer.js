@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import itemsReducer from './itemReducers'
 import userReducer from './userReducer'
+import filterSortReducer from './filterSortReducer'
 
 
 
@@ -8,6 +9,7 @@ import userReducer from './userReducer'
 const rootReducer = combineReducers({
   items: itemsReducer,
   userInfo: userReducer,
+  term: filterSortReducer
 
 });
 

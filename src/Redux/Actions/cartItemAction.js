@@ -18,3 +18,10 @@ export const emptyCartItem = () =>{
     type: "EMPTY_CART",
   }
 }
+
+export const sortItems = (name) =>{
+  return {
+    type: "SORT_ITEMS",
+    payload: name
+  }
+}

@@ -12,6 +12,7 @@ const itemsReducer = (state = initialItemState, action) =>{
     let finalReviewItem ={...foundReviewItem, reviews: [...foundReviewItem.reviews, action.payload]}
      let otherItems = state.filter(item => item.id !== action.payload.item_id)
     return [...otherItems, finalReviewItem ]
+    
     default:
     return state
   }
