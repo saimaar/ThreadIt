@@ -126,15 +126,13 @@ margin-right: -.75em !important;
     margin-top: 4vw;
 }
 
-p:first-child {
-    margin-top: -15vw;
-}
+
 
 .desc{
   margin-top: -2vw;
 }
 
-p {
+.infoo {
     margin: -11px 0 1em;
     line-height: 2.4285em;
 }
@@ -148,9 +146,9 @@ p {
   margin-left: 56vw;
   margin-right: 13vw;
   position: absolute;
-   text-align: left;
+  text-align: left;
   right: 0;
-  margin-top: 3vw;
+  margin-top: 6vw;
 }
 
 .ui.divider.info {
@@ -181,15 +179,43 @@ display: grid;
   font-family: 'Philosopher', sans-serif;
 }
 
-/*------------------------------------ Show Container-------------------------- */
-/* shoppingCart */
-.ui.segment.product-info {
-    margin-left: 7vw;
-    margin-right: -11vw;
+
+/* ---------------------------shoppingCart------------------------------------ */
+  .product-info {
+    margin-right: -11vw !important;
+    margin-left: 7vw !important;
+        margin-top: 5vw !important;
   }
 
 .ui.segment.total-card{
   margin-left: 9vw;
-  margin-right: 5vw;
-  background-color: aliceblue;
+    margin-right: 5vw;
+    background-color: aliceblue;
+    border: 0;
+    margin-top: 12vw;
+    width: 34vw;
+    height: 38vh;
+}
+
+.total-card-two{
+  margin-top: 3vw;
+  line-height: 3vw;
+}
+
+
+.each-product{
+  margin-right: 9vw;
+}
+
+.ui.items:first-child {
+    margin-top: 5vw !important;
+}
+
+.item-content{
+      text-align: left;
+      line-height: 7vw;
+}
+.table{
+  margin-top: 4vw;
+margin-left: 10vw;
 }

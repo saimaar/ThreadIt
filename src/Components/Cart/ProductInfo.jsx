@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {deleteFromCart} from '../../Redux/Actions/cartItemAction'
-import { Segment, Image, Button } from 'semantic-ui-react'
+import { Segment, Image, Button, Grid, Item, Icon, Header} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 
@@ -26,15 +26,22 @@ class ProductInfo extends Component {
 
   render() {
 
-    let {name, price, image} = this.props.cartItem
+    let {name, price, image, color} = this.props.cartItem
     return (
-    <Segment className="product-info">
-      <Image src={`${image}`} size="small"/>
-        product name: <p>{name}</p>
-        price: <p>${price}</p>
-      <Button onClick={this.handleDelete} basic color='red' content='Delete' />
-
-    </Segment>
+    <Item className="product-info">
+      <Item.Image src={`${image}`} size="small"/>
+      <Item.Content className="item-content">
+        <Item.Header>{name}</Item.Header>
+          <Item.Meta>
+            <span className='color'>color: <b>{color}</b></span>
+          </Item.Meta>
+       <Item.Meta>
+         <span className='price'>${price}</span>
+       </Item.Meta>
+       <Icon name="trash alternate outline" onClick={this.handleDelete} />
+       <Header size="small">Remove Item</Header>
+      </Item.Content>
+    </Item>
 
     );
   }

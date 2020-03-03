@@ -89,16 +89,31 @@ class CheckoutInfoCard extends Component {
     return (
 
       <Segment className = "total-card">
-        <p>TOTAL PURCHASE AMOUNT</p><br/>
-        <b>Total Item Price = ${totalPrice}</b><br/>
-        <b>Shipping = ${shipping}</b><br/>
-        <b>You Pay =  ${totalAmount} </b><br/>
-          <StripeCheckout
-            stripeKey = {process.env.REACT_APP_STRIPE_API_KEY}
-            token={this.handleToken}
-            billingAdress
-            shippingAddress
-            />
+        <table className="table">
+          <strong>TOTAL PURCHASE AMOUNT</strong>
+          <tr>
+            <td>Total Item Price</td>
+            <td>${totalPrice}</td>
+          </tr>
+
+          <tr>
+            <td>Shipping</td>
+            <td>${shipping}</td>
+          </tr>
+          <hr/>
+          <tr>
+            <td>You Pay</td>
+            <td>${totalAmount}</td>
+          </tr>
+          <hr/>
+            <StripeCheckout
+              className="checkout Button"
+              stripeKey = {process.env.REACT_APP_STRIPE_API_KEY}
+              token={this.handleToken}
+              billingAdress
+              shippingAddress
+              />
+      </table>
       </Segment>
     );
   }
@@ -117,3 +132,12 @@ const mapStateToProps=(state)=>{
 }
 
 export default withRouter(connect(mapStateToProps, {addOrderItem, emptyCartItem})(CheckoutInfoCard));
+
+
+
+// <th>Total Item Price </th>
+//  <td>${totalPrice}</td><br/>
+//    <th>Shipping</th>
+//     <td><span>{shipping}</span></td>
+//     <th>You Pay</th>
+// <td>{totalAmount} </td>
