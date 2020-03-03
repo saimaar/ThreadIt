@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
-import { Button, Icon, Modal, Header } from 'semantic-ui-react'
+import { Button, Icon, Modal, Header, Segment, Container } from 'semantic-ui-react'
 import { withRouter } from 'react-router-dom'
 import ImgCard from './ImgCard'
+import InfoCard from './InfoCard'
 import ReviewForm from '../Review/ReviewForm'
 import ReviewContainer from '../Review/ReviewContainer'
 import {addToCart} from '../../Redux/Actions/cartItemAction'
@@ -98,16 +99,25 @@ class ShowContainer extends Component {
     let item = this.props.items.find(item => item.id == this.props.match.params.id) || this.state
     return (
       <div>
-          <ImgCard cardType="show-container" item={item}/>
-          <Button disabled={!localStorage.token ? true : false} onClick={this.handleAddToCart} color='google plus'>
-              {localStorage.token ? "Add To Cart" : "Log in to add to cart!"}
-          </Button>
-          <Modal open={this.state.showModal} trigger={<Button onClick={this.openModal}>Review this item</Button>}>
-              <Modal.Description>
-                <Header>Hey Guest!</Header>
-                <ReviewForm closeModal={this.closeModal} handleReview={this.handleReview}/>
-              </Modal.Description>
-          </Modal>
+            <div className="show-cont">
+              <div className ="show-div">
+                <ImgCard cardType="show-container" item={item}/>
+                </div>
+
+
+                <div className ="info-div">
+                  <InfoCard item={item}/>
+                    <Button disabled={!localStorage.token ? true : false} onClick={this.handleAddToCart} color='google plus'>
+                        {localStorage.token ? "Add To Cart" : "Log in to add to cart!"}
+                    </Button>
+                      <Modal open={this.state.showModal} trigger={<Button onClick={this.openModal}>Review this item</Button>}>
+                        <Modal.Description>
+                          <Header>Hey Guest!</Header>
+                          <ReviewForm closeModal={this.closeModal} handleReview={this.handleReview}/>
+                        </Modal.Description>
+                      </Modal>
+                </div>
+            </div>
           <ReviewContainer item={item}/>
       </div>
     );

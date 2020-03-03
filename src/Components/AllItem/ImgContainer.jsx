@@ -28,19 +28,50 @@ class ImgContainer extends Component {
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
       return  imgCards
 
-    } else {
+    } else if (this.props.term.term === "LowToHigh"){
+      let imgCards = this.props.items.sort((itemA, itemB ) => (itemA.price - itemB.price)  ).map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+      return  imgCards
+    } else if (this.props.term.term === "tunic"){
+
+      let imgCards = this.props.items.filter( item => item.category_name === "tunic").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+    } else if (this.props.term.term === "dress"){
+      let imgCards = this.props.items.filter( item => item.category_name === "dress").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+
+    } else if (this.props.term.term === "jumpsuit"){
+      let imgCards = this.props.items.filter( item => item.category_name === "jumpsuit").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+
+    } else if(this.props.term.term === "bottom"){
+      let imgCards = this.props.items.filter( item => item.category_name === "bottom").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+
+    } else if (this.props.term.term === "top"){
+      let imgCards = this.props.items.filter( item => item.category_name === "top").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+
+    } else if (this.props.term.term === "All"){
+      let imgCards= this.props.items.map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+      return  imgCards
+
+    }else {
         let imgCards= this.props.items.map(item =>
           <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards
     }
-
-
   }
 
 
 
   render() {
-    console.log("items:", this.props.items)
 
     return (
         <Card.Group itemsPerRow={6}>{this.filterItems()}</Card.Group>

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ReviewCard from './ReviewCard'
+import {Segment} from 'semantic-ui-react'
 
 class ReviewContainer extends Component {
+
+
 
   render() {
     // debugger
@@ -9,7 +12,7 @@ class ReviewContainer extends Component {
     this.props.item.reviews.map( review => <ReviewCard review={review}/>) : null
 
     return (
-      <div>{reviewCard}</div>
+      <Segment className="segment-review">Custom Ratings & Reviews{reviewCard}</Segment>
     );
   }
 

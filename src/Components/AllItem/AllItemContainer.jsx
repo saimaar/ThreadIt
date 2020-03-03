@@ -7,8 +7,8 @@ class AllItemContainer extends Component {
   render() {
     return (
       <div>
-      <ImgContainer/>
       <SideBarContainer/>
+      <ImgContainer/>
       </div>
     );
   }

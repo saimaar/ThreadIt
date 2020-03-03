@@ -12,10 +12,47 @@ class SideBarContainer extends Component {
 
   }
 
-clickingPrice = (e, {name}) => {
-  console.log("click me");
+clickingHighPrice = (e, {name}) => {
   this.handleItemClick(e, name)
   this.props.sortItems("HighToLow")
+}
+
+clickingLowPrice =(e, {name})=>{
+  this.handleItemClick(e, name)
+  this.props.sortItems("LowToHigh")
+}
+
+clickingTunic = (e, {name})=>{
+    this.handleItemClick(e, name)
+    this.props.sortItems("tunic")
+}
+
+clickingDress = (e, {name})=>{
+    this.handleItemClick(e, name)
+    this.props.sortItems("dress")
+}
+
+clickingJumpsuit = (e, {name})=>{
+    this.handleItemClick(e, name)
+    this.props.sortItems("jumpsuit")
+}
+
+clickingBottom=(e, {name})=>{
+  this.handleItemClick(e, name)
+  this.props.sortItems("bottom")
+
+}
+
+clickingTop=(e, {name})=>{
+  this.handleItemClick(e, name)
+  this.props.sortItems("top")
+
+}
+
+clickingAll=(e, {name})=>{
+  this.handleItemClick(e, name)
+  this.props.sortItems("all")
+
 }
 
   render() {
@@ -31,38 +68,43 @@ clickingPrice = (e, {name}) => {
          <Menu.Item
            name='price: Highest to Lowest'
            active={activeItem === 'price: Highest to Lowest'}
-           onClick={this.clickingPrice}
+           onClick={this.clickingHighPrice}
          />
          <Menu.Item
            name='price: Lowest to Highest'
            active={activeItem === 'price: Lowest to Highest'}
-           onClick={this.handleItemClick}
+           onClick={this.clickingLowPrice}
          />
        <Menu.Item header>Category</Menu.Item>
          <Menu.Item
+           name='All'
+           active={activeItem === 'All'}
+           onClick={this.clickingAll}
+         />
+         <Menu.Item
            name='Tunic'
            active={activeItem === 'Tunic'}
-           onClick={this.handleItemClick}
+           onClick={this.clickingTunic}
          />
          <Menu.Item
            name='Dress'
            active={activeItem === 'Dress'}
-           onClick={this.handleItemClick}
+           onClick={this.clickingDress}
          />
          <Menu.Item
            name='Jumpsuits'
            active={activeItem === 'Jumpsuits'}
-           onClick={this.handleItemClick}
+           onClick={this.clickingJumpsuit}
          />
          <Menu.Item
-           name='Botton'
-           active={activeItem === 'Botton'}
-           onClick={this.handleItemClick}
+           name='Bottoms'
+           active={activeItem === 'Bottoms'}
+           onClick={this.clickingBottom}
          />
          <Menu.Item
            name='Top'
            active={activeItem === 'Top'}
-           onClick={this.handleItemClick}
+           onClick={this.clickingTop}
          />
       </Menu>
     );

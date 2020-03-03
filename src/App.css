@@ -1,7 +1,20 @@
+/* font-family: 'Bree Serif', serif;
+font-family: 'Simonetta', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Monda', sans-serif;
+font-family: 'Courgette', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Cookie', cursive;
+font-family: 'Philosopher', sans-serif; */
+
+
 .App {
   text-align: center;
 }
-/* Header */
+/* -------------------------------------Header--------------------------------- */
 .main-header {
   height: 15vw;
   display: block;
@@ -9,8 +22,9 @@
 
 
 .logo{
-    width: 23vw;
+  width: 12vw;
 }
+
 
 .ui.secondary.menu {
     margin-left:   33.642857em;
@@ -19,6 +33,9 @@
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold !important;
+
 
 }
 /* cart icon */
@@ -31,15 +48,9 @@ i.icon.cart:before {
   padding: 2vw
 }
 
-/* side bar  */
-.ui.text.vertical.menu {
-    position: fixed;
-    margin-left: 3vw;
-    margin-top: -67vw;
-    width: 16rem;
-    float: left;
-}
 
+
+/* ----------------------------header menu------------------------------------ */
 .item.profile-link{
 margin: 2vw;
 padding: -1vw;
@@ -77,13 +88,12 @@ margin-left: 1.54vw;
   padding: 7vw 4vw;
 }
 
-
-/* homepage image */
+/*------------------------- homepage image -------------------------------------*/
 img.ui.image.home-image {
   margin: 2vw !important
 }
 
-/* all items images card */
+/*------------------------- all items images card ------------------------------*/
 
 .ui.card:last-child {
   margin-bottom: 2vw !important;
@@ -98,14 +108,80 @@ margin-right: -.75em !important;
 .ui.cards {
     margin: 4.125em 0.5em !important;
   }
+/* -------------------------------side bar ---------------------------------- */
+  .ui.text.vertical.menu {
+      position: fixed;
+      margin-left: 3vw;
+      margin-top: -110vw;
+      width: 16rem;
+      float: left;
+  }
 
-/* Show Container */
 
-.show-container{
-
+/*------------------------------------ Show Container-------------------------- */
+  div.show-image img {
+    border-style: none;
+    width: 38vw;
+    margin-left: 9vw;
+    margin-top: 4vw;
 }
 
+p:first-child {
+    margin-top: -15vw;
+}
 
+.desc{
+  margin-top: -2vw;
+}
+
+p {
+    margin: -11px 0 1em;
+    line-height: 2.4285em;
+}
+
+  .show-cont{
+  display: flex;
+}
+
+.info-div{
+  display: grid;
+  margin-left: 56vw;
+  margin-right: 13vw;
+  position: absolute;
+   text-align: left;
+  right: 0;
+  margin-top: 3vw;
+}
+
+.ui.divider.info {
+height: fit-content;
+display: grid;
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+    border-top: 0;
+    /* border-bottom: 1px solid rgba(255,255,255,.1); */
+}
+
+.show-div{
+  display: inline-table;
+}
+
+.segment-review{
+  position: inherit !important;
+  margin-right: 53vw !important;
+  margin-left: 8.5vw !important;
+  margin-top: 6vw !important;
+  font-family: 'Bree Serif', serif;
+  font-size: large !important
+}
+
+.rev-card{
+  text-align: start !important;
+  font-family: 'Philosopher', sans-serif;
+}
+
+/*------------------------------------ Show Container-------------------------- */
 /* shoppingCart */
 .ui.segment.product-info {
     margin-left: 7vw;
