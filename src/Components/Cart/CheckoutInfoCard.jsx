@@ -21,6 +21,7 @@ class CheckoutInfoCard extends Component {
   }
 
 
+
 //address which is coming from the token
   formatAddress = (address)=>{
     let shippingAddress = address["shipping_address_line1"] + ", " + address["shipping_address_city"] + ", "

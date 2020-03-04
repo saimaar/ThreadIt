@@ -27,7 +27,7 @@ font-family: 'Philosopher', sans-serif; */
 
 
 .ui.secondary.menu {
-    margin-left:   33.642857em;
+    margin-left: 33vw;
     margin-right: 29.642857em;
     border-radius: 0;
     border: none;
@@ -42,6 +42,7 @@ font-family: 'Philosopher', sans-serif; */
 i.icon.cart:before {
     content: "\f07a";
     margin-left: -4vw;
+    cursor: pointer;
 }
 
 .ui.secondary.menu .item{
@@ -78,21 +79,44 @@ margin-left: 1.54vw;
 .ui.modal{
   text-align: center !important;
   font-size: large !important;
-  width: 42vw !important;
-  height: 53vw !important;
+  width: 35vw !important;
+  height: 41vw !important;
 }
 
 /* userform  */
 .user-form{
+  color: teal;
   width: 100%;
-  padding: 7vw 4vw;
+  padding: 14vw 4vw;
+  background: url('./formpic.jpg');
 }
 
+.reg-login{
+    font-family: 'Sacramento', cursive;
+}
+
+.hey-guest{
+font-family: 'Courgette', cursive !important;
+margin-top: 2vw !important
+
+}
 /*------------------------- homepage image -------------------------------------*/
-img.ui.image.home-image {
-  margin: 2vw !important
+.home-image {
+  margin: 0vw !important;
+  width: 100vw;
+  cursor: pointer !important;
 }
 
+.about-page{
+  font-family: 'Caveat', cursive;
+   font-size: 3vw !important;
+   background-color: aliceblue !important;
+}
+
+.about-header{
+  font-family: 'Bree Serif', serif;
+  font-size: 4vw !important
+}
 /*------------------------- all items images card ------------------------------*/
 
 .ui.card:last-child {
@@ -181,6 +205,13 @@ display: grid;
 
 
 /* ---------------------------shoppingCart------------------------------------ */
+
+.title-org{
+  font-family: 'Cookie', cursive;
+  margin-top: 3vw !important;
+  margin-left: 26vw;
+  font-size: 2vw;
+}
   .product-info {
     margin-right: -11vw !important;
     margin-left: 7vw !important;
@@ -192,7 +223,7 @@ display: grid;
     margin-right: 5vw;
     background-color: aliceblue;
     border: 0;
-    margin-top: 12vw;
+    margin-top: 6vw;
     width: 34vw;
     height: 38vh;
 }

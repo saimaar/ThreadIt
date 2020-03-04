@@ -21,7 +21,7 @@ class ImgContainer extends Component {
 
   filterItems =()=>{
     // debugger
-    let {name, id} = this.props.items
+    let {name, id, color} = this.props.items
     // console.log(this.props.items);
     if (this.props.term.term === "HighToLow"){
       let imgCards = this.props.items.sort((itemA, itemB ) => (itemB.price - itemA.price)  ).map(item =>
@@ -57,12 +57,17 @@ class ImgContainer extends Component {
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards
 
-    } else if (this.props.term.term === "All"){
+    } else if (this.props.term.term === "all"){
       let imgCards= this.props.items.map(item =>
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
       return  imgCards
 
-    }else {
+    } else if (this.props.term.term ){
+      let imgCards = this.props.items.filter( item => item.color.toLowerCase() === this.props.term.term.toLowerCase()).map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+
+    }  else {
         let imgCards= this.props.items.map(item =>
           <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards

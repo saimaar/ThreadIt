@@ -29,28 +29,31 @@ class UserForm extends Component {
     return (
       <div>
         <form className="user-form" onSubmit={this.handleSubmit}>
-          <h1>{this.props.formType === "login" ? "login" : "register"}</h1>
-          <label htmlFor="username">Username:</label><br/>
+          <h1 className="reg-login">{this.props.formType === "login" ? "Login" : "Register"}</h1>
+          <label htmlFor="username"></label><br/>
             <input
               type="text"
               autoComplete="off"
               name="username"
+              placeholder="Username....."
               value={this.state.username}
               onChange={this.handleAllChange}/><br/>
             { this.props.formType !== "login" ?
               <div>
-            <label htmlFor="email">e-mail:</label><br/>
+            <label htmlFor="email"></label><br/>
               <input type="email"
                 autoComplete="off"
+                placeholder="e-mail....."
                 name="email"
                 value={this.state.email}
                 onChange={this.handleAllChange}/><br/>
             </div> : null }
 
-            <label htmlFor="password">Password:</label><br/>
+            <label htmlFor="password"></label><br/>
             <input type="password"
               autoComplete="off"
               name="password"
+              placeholder="Password....."
               value={this.state.password}
               onChange={this.handleAllChange}/><br/>
             <input type="submit" value="Submit"/>

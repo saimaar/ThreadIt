@@ -13,15 +13,16 @@ class ShoppingCartContainer extends Component {
 
     let productInfo = this.props.cart_items ? this.props.cart_items.map(cartItem => <ProductInfo cartItem ={cartItem}/>) : null
     return (
-    <Grid columns={2} relaxed='very'>
 
+    <Grid columns={2} relaxed='very'>
+      <p className="title-org">Everytime you shop here, 15% of your total amount will
+        be donated to the organization of your choice!
+      </p>
     <Grid.Column>
       <Item.Group  className="each-product" divided>
           {productInfo}
       </Item.Group>
     </Grid.Column>
-
-
       <Grid.Column>
            <CheckoutInfoCard/>
       </Grid.Column>
