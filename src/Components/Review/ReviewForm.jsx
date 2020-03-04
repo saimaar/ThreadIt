@@ -35,7 +35,7 @@ class ReviewForm extends Component {
     // console.log(this.state);
     return (
     <form className="review-form" onSubmit={this.handleSubmit}>
-        <Rating onRate={this.handleRate}
+        <Rating className="review-r"  onRate={this.handleRate}
         icon='heart'
         defaultRating={1}
         maxRating={5} /><br/>
@@ -45,7 +45,8 @@ class ReviewForm extends Component {
          value={this.state.comment}
          onChange={this.handleAllChange}
          placeholder="...Review your item here"
-         /><br/>
+         />
+       <br/>
        <input type="submit" value="submit"/>
      </form>
     );

@@ -11,7 +11,7 @@ class AboutPage extends Component {
   <Segment className="about-page">
     <Image src={w1} size='xlarge' floated='left' />
     <h1 className="about-header">Our Belief</h1>
-    <p>
+    <p >
       We believe in creating beautiful tomorrows for our crafts, people and planet. We look towards the future,
       practicing and building processes that are <b>Sustainable</b>, innovative and environmentally conscious.
     </p>

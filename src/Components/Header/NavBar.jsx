@@ -10,7 +10,6 @@ class NavBar extends Component {
   handleAllOption =(e, { name })=>{
     this.handleItemClick(e, name)
     //i want to refresh the page on click
-
   }
 
   render() {
@@ -26,11 +25,11 @@ class NavBar extends Component {
           active={this.state.activeItem === 'All'}
           onClick={this.handleAllOption}
         /></Link>
-        <Menu.Item
+      <Link to={'/wedding'}><Menu.Item
           name='Wedding'
           active={this.state.activeItem === 'Wedding'}
           onClick={this.handleItemClick}
-        />
+        /></Link>
       <Link to={'/about'}><Menu.Item
           name='About'
           active={this.state.activeItem === 'About'}

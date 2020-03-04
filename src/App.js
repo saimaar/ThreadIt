@@ -11,6 +11,7 @@ import UserProfile from './Components/Profile/UserProfile'
 import ShoppingCartContainer from './Components/Cart/ShoppingCartContainer'
 import OrderContainer from './Components/OrderPage/OrderContainer'
 import AboutPage from './Components/Home/AboutPage'
+import Wedding from './Components/Home/Wedding'
 import {renderItems} from './Redux/Actions/renderItems'
 import {saveUserToState} from './Redux/Actions/userActions'
 
@@ -113,6 +114,7 @@ class App extends Component {
           <Route path= '/shoppingCart'component={ShoppingCartContainer}/>
           <Route path= '/orders'component={OrderContainer}/>
           <Route path ='/about' component={AboutPage}/>
+          <Route path ='/wedding' component={Wedding}/>
         </Switch>
       </div>
     );

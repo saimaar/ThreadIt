@@ -76,7 +76,7 @@ margin-left: 1.54vw;
   top: 26px;
 }
 /* MODAL */
-.ui.modal{
+.user-modal{
   text-align: center !important;
   font-size: large !important;
   width: 35vw !important;
@@ -107,6 +107,7 @@ margin-top: 2vw !important
   cursor: pointer !important;
 }
 
+/*------------------------- About page ----------------------------------------*/
 .about-page{
   font-family: 'Caveat', cursive;
    font-size: 3vw !important;
@@ -117,6 +118,53 @@ margin-top: 2vw !important
   font-family: 'Bree Serif', serif;
   font-size: 4vw !important
 }
+
+
+/* ----------------------wedding look book------------------------------------- */
+.look-book{
+  font-family: 'Cookie', cursive;
+  font-size: 4vw !important;
+  color: white
+}
+.wed-look{
+  /* margin-left: 1vw;
+  margin-right: 1vw; */
+  background-color: black !important;
+  color: white;
+  width: 100vw;
+  height: 121vw;
+  font-size: 2vw !important
+}
+
+.wed1-ptag{
+  margin-top: 2vw;
+  margin-right: 14vw !important;
+  margin-left: 36vw !important;
+  font-family: 'Simonetta', cursive;
+}
+.wed2-ptag{
+  margin-top: -12vw;
+  margin-right: 14vw !important;
+  margin-left: 36vw !important;
+  font-family: 'Simonetta', cursive;
+}
+
+.wed3-ptag{
+      font-family: 'Simonetta', cursive;
+}
+
+.wed4-ptag{
+  font-family: 'Simonetta', cursive;
+  margin-top: 10vw !important
+}
+
+.wed3-img{
+
+  margin-left: 7vw !important;
+  margin-top: -4vw;
+
+}
+
 /*------------------------- all items images card ------------------------------*/
 
 .ui.card:last-child {
@@ -201,10 +249,42 @@ display: grid;
 .rev-card{
   text-align: start !important;
   font-family: 'Philosopher', sans-serif;
+
+
 }
 
+.user-rev{
+  font-family: 'Simonetta', cursive;
+  font-size: 1.25vw;
+}
+.verified{
+  font-family: 'Old Standard TT', serif;
+  font-size: small;
+  line-height: 2.4285em;
+}
 
 /* ---------------------------shoppingCart------------------------------------ */
+  .review-form{
+    margin-top: 2vw !important;
+    margin-left: 5vw !important;
+    width: 40vw !important;
+    height: 20vw !important;
+
+  }
+  .review-r{
+    margin-left: 7vw
+  }
+
+  .rev-matter{
+    margin-top: 2.5vw !important;
+    margin-left: 10vw !important;
+  }
+  .rev-modal{  
+    width: 30vw !important;
+    height: 40vh !important;
+    background: url('./sketch2.jpg') !important
+
+  }
 
 .title-org{
   font-family: 'Cookie', cursive;

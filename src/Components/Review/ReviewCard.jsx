@@ -8,16 +8,18 @@ class ReviewCard extends Component {
     return (
 
     <Item.Content className="rev-card">
-       <Item.Header>{username} says:</Item.Header>
-       <Item.Extra>
-         <Rating
-            disabled={true}
-            icon='heart'
-            defaultRating={rating}
-            maxRating={5}
-            />
-        </Item.Extra>
-       <Item.Meta>{comment}</Item.Meta>
+      <Rating
+         disabled={true}
+         icon='heart'
+         defaultRating={rating}
+         maxRating={5}
+         />
+       <Item.Header className="user-rev">{username} says:</Item.Header>
+         <Item.Extra className="verified">
+           verified customer
+         </Item.Extra>
+               <Item.Meta>{comment}</Item.Meta>
+               <hr/>
           <Divider/>
    </Item.Content>
 

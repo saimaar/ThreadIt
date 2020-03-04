@@ -8,8 +8,8 @@ class SideBarContainer extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   filterColor=(e, {name})=>{
-      this.handleItemClick(e, name)
-
+    this.handleItemClick(e, name)
+    this.props.sortItems("all")
   }
 
 clickingHighPrice = (e, {name}) => {

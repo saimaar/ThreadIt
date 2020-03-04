@@ -110,9 +110,9 @@ class ShowContainer extends Component {
                     <Button disabled={!localStorage.token ? true : false} onClick={this.handleAddToCart} color='google plus'>
                         {localStorage.token ? "Add To Cart" : "Log in to add to cart!"}
                     </Button>
-                      <Modal open={this.state.showModal} trigger={<Button onClick={this.openModal}>Review this item</Button>}>
-                        <Modal.Description>
-                          <Header>Hey Guest!</Header>
+                      <Modal className="rev-modal" open={this.state.showModal} trigger={<Button onClick={this.openModal}>Review this item</Button>}>
+                        <Modal.Description >
+                          <Header className="rev-matter">Your Review Matters!</Header>
                           <ReviewForm closeModal={this.closeModal} handleReview={this.handleReview}/>
                         </Modal.Description>
                       </Modal>
