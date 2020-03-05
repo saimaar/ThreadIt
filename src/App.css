@@ -115,6 +115,11 @@ margin-top: 2vw !important
   background-color: #ffcc66 !important;
   border-style: dotted;
 }
+
+.dress-home{
+  background-color: #FA8072 !important;
+  border-style: dotted;
+}
 /*------------------------- About page ----------------------------------------*/
 .about-page{
   font-family: 'Caveat', cursive;
@@ -337,4 +342,15 @@ display: grid;
 .table{
   margin-top: 4vw;
 margin-left: 10vw;
+}
+
+.order{
+  font-family: 'Sacramento', cursive;
+    font-size: 2vw;
+}
+
+.order-card{
+  margin-top: 2vw;
+  font-family: 'Caveat', cursive !important;
+    font-size: 1.5vw;
 }

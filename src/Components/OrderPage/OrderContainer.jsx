@@ -11,7 +11,7 @@ class OrderContainer extends Component {
 
     return (
       <Segment>
-        <b>Your order is on the way</b>
+        <b className= "order">Your order is being processed....</b>
         {orderCard}
       </Segment>
     );

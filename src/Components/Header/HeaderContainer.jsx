@@ -39,7 +39,7 @@ class HeaderContainer extends Component {
         <Segment className="main-header">
               <Link to={`/`}><img className="logo" src={logo}/></Link>
               <ul className="menu-right">
-                <Icon onClick={this.handleCart} name='cart' size='large' />
+                <Icon onClick={this.handleCart} disabled={localStorage.token ? false : true} name='cart' size='large' />
                 <Dropdown
                     text={this.props.user.username ? `Hey ${this.props.user.username}!` : "Hey User!" }
                     icon='user'
@@ -52,7 +52,7 @@ class HeaderContainer extends Component {
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType='login' handleLogin={this.props.handleLogin}/></Dropdown.Item> : null}
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType ='register' handleRegister={this.props.handleRegister}/></Dropdown.Item> : null}
                         {localStorage.token  ? <Dropdown.Item className="logout-link" onClick={this.handleLogout}>logout</Dropdown.Item> : null}
-                        {localStorage.token  ? <Link to='/profile'><Dropdown.Item className="profile-link">Profile</Dropdown.Item></Link> : null}
+                        {localStorage.token  ? <Dropdown.Item as={Link} to="/profile" className="profile-link">Profile</Dropdown.Item>: null}
                     </Dropdown.Menu>
                   </Dropdown>
               </ul>

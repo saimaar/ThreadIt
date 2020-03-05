@@ -11,7 +11,7 @@ class OrderCard extends Component {
 
   // console.log(this.props.order);
     return (
-      <div>
+      <div className="order-card">
       {orderItemcard}
       </div>
     );

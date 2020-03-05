@@ -49,6 +49,13 @@ clickingTop=(e, {name})=>{
 
 }
 
+
+clickingWedding=(e, {name})=>{
+  this.handleItemClick(e, name)
+  this.props.sortItems("wedding")
+
+}
+
 clickingAll=(e, {name})=>{
   this.handleItemClick(e, name)
   this.props.sortItems("all")
@@ -164,6 +171,11 @@ handleColor=(evt)=>{
            name='Dress'
            active={activeItem === 'Dress'}
            onClick={this.clickingDress}
+         />
+         <Menu.Item
+           name='Wedding'
+           active={activeItem === 'Wedding'}
+           onClick={this.clickingWedding}
          />
          <Menu.Item
            name='Jumpsuits'

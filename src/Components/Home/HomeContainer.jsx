@@ -19,6 +19,12 @@ class HomeContainer extends Component {
 
     }
 
+    handleDress=()=>{
+      this.props.sortItems("dress")
+      this.props.history.push('/items')
+
+    }
+
   render() {
     return (
       <div>
@@ -29,7 +35,15 @@ class HomeContainer extends Component {
         <Image src="https://www.globaldesi.in/media/catalog/product/cache/8ba85772601582a264183d0a493354f1/f/f/ff20gh005jsmo_rust_2_.jpg" />
         <Image src="https://www.globaldesi.in/media/catalog/product/cache/8ba85772601582a264183d0a493354f1/f/f/ff20gh001ajsrl_wine_1_.jpg" />
       </Image.Group>
+        <Divider/>
+          <Header className="home-one-h1">Shop Dress!</Header>
+          <Image.Group onClick={this.handleDress} className="dress-home" size='large'>
+            <Image src="https://us.anitadongre.com/media/catalog/product/cache/9068914f3af5c89421a71a6fdd0cb779/s/s/ss19mb010-stone--_2_.jpg?v=4" />
+            <Image src="https://us.anitadongre.com/media/catalog/product/cache/9068914f3af5c89421a71a6fdd0cb779/f/w/fw19mb055cf-yellow_1_.jpg" />
+            <Image src="https://us.anitadongre.com/media/catalog/product/cache/8de74e620574e722f01d119e92a06058/s/s/ss19mb080-onion-pink-_1_.jpg" />
 
+
+          </Image.Group>
       </div>
     );
   }

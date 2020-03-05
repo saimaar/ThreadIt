@@ -55,7 +55,11 @@ class ImgContainer extends Component {
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards
 
-    } else if (this.props.term.term === "top"){
+    } else if(this.props.term.term === "wedding"){
+      let imgCards = this.props.items.filter( item => item.category_name === "wedding").map(item =>
+        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+        return  imgCards
+    }else if (this.props.term.term === "top"){
       let imgCards = this.props.items.filter( item => item.category_name === "top").map(item =>
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards
@@ -90,7 +94,7 @@ class ImgContainer extends Component {
 
 
 const mapStateToProps = (state) => {
-// console.log(state.term);
+console.log(state.term);
 //   console.log(state)
   return {
     items: state.items,
