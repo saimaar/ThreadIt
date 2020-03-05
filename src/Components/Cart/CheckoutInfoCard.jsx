@@ -82,13 +82,15 @@ class CheckoutInfoCard extends Component {
     }
 
   render() {
+    let cartLength =   this.userCart ?  this.userCart.length : 0
+
     const shipping = 10
     let totalAmount = this.cartAmount()
     let totalPrice = totalAmount - 10
     totalAmount = totalAmount ? totalAmount: totalAmount = "0"
     totalPrice = totalPrice ? totalPrice : totalPrice = "0"
     return (
-      
+
       <Segment className = "total-card">
         <table className="table">
           <strong>TOTAL PURCHASE AMOUNT</strong>
@@ -99,7 +101,8 @@ class CheckoutInfoCard extends Component {
 
           <tr>
             <td>Shipping</td>
-            <td>${shipping}</td>
+            {this.props.userCart && this.props.userCart.length > 0  ?   <td>${shipping}</td> : <td>${0}</td>  }
+
           </tr>
           <hr/>
           <tr>
@@ -107,15 +110,30 @@ class CheckoutInfoCard extends Component {
             <td>${totalAmount}</td>
           </tr>
           <hr/>
+
+        { this.props.userCart && this.props.userCart.length > 0  ?
             <StripeCheckout
+              disabled = {false}
               className="checkout Button"
               stripeKey = {process.env.REACT_APP_STRIPE_API_KEY}
               token={this.handleToken}
               billingAdress
               shippingAddress
               />
+            :
+            <StripeCheckout
+              disabled= {true}
+              className="checkout Button"
+              stripeKey = {process.env.REACT_APP_STRIPE_API_KEY}
+              token={this.handleToken}
+              billingAdress
+              shippingAddress
+              />
+
+          }
       </table>
       </Segment>
+
     );
   }
 
@@ -123,6 +141,7 @@ class CheckoutInfoCard extends Component {
 
 
 const mapStateToProps=(state)=>{
+
   // debugger
   //put price in the state
   //and then call the action here
