@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Card, Image } from 'semantic-ui-react'
+import {Slider, Slide } from "pure-react-carousel";
+
 
 class ImgCard extends Component {
 
@@ -18,6 +20,20 @@ class ImgCard extends Component {
     return <Image className="show-image" src={image} alt="show image" wrapped ui={false}/>
   }
 
+  homeItemImage =(image)=>{
+    return  <Image src={image} /> 
+  }
+
+  finaleImageCard =(image, price, name, designer)=>{
+    if (this.props.cardType === "show-container"){
+      return this.showItemImage(image)
+    } else if(this.props.cardType === "home-img") {
+      return this.homeItemImage(image)
+    } else {
+      return this.allItemImage(image, price, name, designer)
+    }
+  }
+
 
 
   render() {
@@ -26,9 +42,7 @@ class ImgCard extends Component {
     return (
 
       <>
-      {this.props.cardType === "show-container" ?
-        this.showItemImage(image) :
-        this.allItemImage(image, price, name, designer)}
+      {this.finaleImageCard(image, price, name, designer)}
       </>
 
     );

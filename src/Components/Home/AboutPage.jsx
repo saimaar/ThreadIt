@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Segment, Image } from 'semantic-ui-react'
-import w1 from './w1.jpg'
-import sustain from './sustainable-apparel.png'
+import w1 from './images/w1.jpg'
+import sustain from './images/sustainable-apparel.png'
 
 class AboutPage extends Component {
 

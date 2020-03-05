@@ -18,6 +18,9 @@ class ImgContainer extends Component {
   //     console.log("nope")
   //   }
   // }
+  // componentDidMount(){
+  //   this.props.sortItems("all");
+  // }
 
   filterItems =()=>{
     // debugger
@@ -87,8 +90,8 @@ class ImgContainer extends Component {
 
 
 const mapStateToProps = (state) => {
-console.log(state.term);
-  console.log(state)
+// console.log(state.term);
+//   console.log(state)
   return {
     items: state.items,
     term: state.term

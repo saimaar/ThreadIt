@@ -19,9 +19,9 @@ export const emptyCartItem = () =>{
   }
 }
 
-export const sortItems = (name) =>{
+export const sortItems = (term) =>{
   return {
     type: "SORT_ITEMS",
-    payload: name
+    payload: term
   }
 }

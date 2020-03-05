@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Segment, Image, Divider } from 'semantic-ui-react'
-import wed1 from './wed1.jpg'
-import wed2 from './wed2.jpg'
-import wed3 from './wed3.jpg'
-import maisa from './maisa.jpg'
+import wed1 from './images/wed1.jpg'
+import wed2 from './images/wed3.jpg'
+
 
 
 
@@ -25,7 +24,7 @@ class Wedding extends Component {
             from our collection.
         </p>
 
-    <Image className="wed3-img" src={wed3} size='large' left />
+    <Image className="wed3-img" src={wed2} size='large' left />
     <p className="wed2-ptag">
       While earlier this was a smaller store,
       we have now completely revamped it to make a super

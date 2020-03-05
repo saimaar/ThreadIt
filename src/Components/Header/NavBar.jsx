@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import {Menu} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import {sortItems} from '../../Redux/Actions/cartItemAction'
+import {connect} from 'react-redux'
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   handleAllOption =(e, { name })=>{
+    if (name === 'All') {
+      this.props.sortItems('all')
+    }
     this.handleItemClick(e, name)
     //i want to refresh the page on click
   }
@@ -45,5 +50,4 @@ class NavBar extends Component {
   }
 
 }
-
-export default NavBar;
+export default connect(null, {sortItems})(NavBar);
