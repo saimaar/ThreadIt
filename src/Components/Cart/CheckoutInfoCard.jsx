@@ -88,7 +88,7 @@ class CheckoutInfoCard extends Component {
     totalAmount = totalAmount ? totalAmount: totalAmount = "0"
     totalPrice = totalPrice ? totalPrice : totalPrice = "0"
     return (
-
+      
       <Segment className = "total-card">
         <table className="table">
           <strong>TOTAL PURCHASE AMOUNT</strong>

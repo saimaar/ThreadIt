@@ -51,8 +51,8 @@ class HeaderContainer extends Component {
                     <Dropdown.Menu>
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType='login' handleLogin={this.props.handleLogin}/></Dropdown.Item> : null}
                         {!localStorage.token ? <Dropdown.Item><ModalForm formType ='register' handleRegister={this.props.handleRegister}/></Dropdown.Item> : null}
-                        {localStorage.token  ? <Dropdown.Item className="logout-link" onClick={this.handleLogout}>logout</Dropdown.Item> : null}
-                        {localStorage.token  ? <Dropdown.Item as={Link} to="/profile" className="profile-link">Profile</Dropdown.Item>: null}
+                        {localStorage.token  ? <Dropdown.Item  onClick={this.handleLogout}>logout</Dropdown.Item> : null}
+                        {localStorage.token  ? <Dropdown.Item as={Link} to="/profile" >Profile</Dropdown.Item>: null}
                     </Dropdown.Menu>
                   </Dropdown>
               </ul>

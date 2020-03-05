@@ -39,7 +39,9 @@ class ReviewForm extends Component {
         icon='heart'
         defaultRating={1}
         maxRating={5} /><br/>
-        <textarea rows="4"
+        <textarea
+          style ={{width: "50%"}}
+          rows="4"
          cols="50"
          name="comment"
          value={this.state.comment}
