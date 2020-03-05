@@ -37,7 +37,7 @@ class HomeContainer extends Component {
       </Image.Group>
         <Divider/>
           <Header className="home-one-h1">Shop Dress!</Header>
-          <Image.Group onClick={this.handleDress} className="dress-home" size='large'>
+          <Image.Group onClick={this.handleDress} className="dress-home" size='medium'>
             <Image src="https://us.anitadongre.com/media/catalog/product/cache/9068914f3af5c89421a71a6fdd0cb779/s/s/ss19mb010-stone--_2_.jpg?v=4" />
             <Image src="https://us.anitadongre.com/media/catalog/product/cache/9068914f3af5c89421a71a6fdd0cb779/f/w/fw19mb055cf-yellow_1_.jpg" />
             <Image src="https://us.anitadongre.com/media/catalog/product/cache/8de74e620574e722f01d119e92a06058/s/s/ss19mb080-onion-pink-_1_.jpg" />
