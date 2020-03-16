@@ -3,6 +3,7 @@ import ProductInfo from './ProductInfo'
 import CheckoutInfoCard from './CheckoutInfoCard'
 import {connect} from 'react-redux';
 import {Grid, Column, Item} from 'semantic-ui-react'
+import emptyCartImg from './empty_cart.png'
 
 
 
@@ -10,7 +11,8 @@ class ShoppingCartContainer extends Component {
 
   render() {
     // console.log(this.props.cart);
-
+    let cartCount = this.props.cart_items ? this.props.cart_items.length : null
+    console.log(cartCount)
     let productInfo = this.props.cart_items ? this.props.cart_items.map(cartItem => <ProductInfo cartItem ={cartItem}/>) : null
     return (
 
@@ -20,7 +22,7 @@ class ShoppingCartContainer extends Component {
       </p>
     <Grid.Column>
       <Item.Group  className="each-product" divided>
-          {productInfo}
+          {cartCount > 0 ? productInfo : <img className="empty_cart" src={emptyCartImg} alt="sorry your cart is empty"/>}
       </Item.Group>
     </Grid.Column>
       <Grid.Column>
