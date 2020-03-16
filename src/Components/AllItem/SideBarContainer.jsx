@@ -28,7 +28,7 @@ class SideBarContainer extends Component {
 
   getMenuItems=()=>{
    const { activeItem } = this.state
-   let termArray = ["All", "Tunic", "Dress", "Wedding", "Jumpsuit", "Bottom", "Top" ]
+   let termArray = ["All","Tunic", "Dress", "Wedding", "Jumpsuit", "Bottom", "Top" ]
    let menuItems = termArray.map(term => {
      return (
        <Menu.Item

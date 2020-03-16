@@ -7,73 +7,32 @@ import {sortItems} from '../../Redux/Actions/cartItemAction'
 
 
 class ImgContainer extends Component {
+  filterByCategory = (term)=>{
+    return this.props.items.filter( item => item.category_name === term).map(item =>
+      <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+  }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.term !== this.props.term){
-  //     console.log("THIS IS THE TERM", this.props.term.term);
-  //     this.filterItems()
-  //     console.log("HighToLow" === this.props.term.term)
-  //     console.log("has it filtered?")
-  //   } else{
-  //     console.log("nope")
-  //   }
-  // }
-  // componentDidMount(){
-  //   this.props.sortItems("all");
-  // }
+  sortByPrice=(term)=>{
+    return this.props.items.sort((itemA, itemB ) =>
+     term === "HighToLow" ? (itemB.price - itemA.price) : (itemA.price - itemB.price)).map(item =>
+      <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
+  }
 
   filterItems =()=>{
-    // debugger
+    let filterCategories = ["jumpsuit", "dress", "tunic", "bottom", "wedding", "top"]
+    let colorCategories = ["Red", "Blue", "Black", "Purple", "Orange", "Grey", "Yellow", "Pink", "Green"]
+    let priceCategories = ["HighToLow", "LowToHigh"]
     let {name, id, color} = this.props.items
-    // console.log(this.props.items);
-    if (this.props.term.term === "HighToLow"){
-      let imgCards = this.props.items.sort((itemA, itemB ) => (itemB.price - itemA.price)  ).map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-      return  imgCards
+    let term = this.props.term.term
 
-    } else if (this.props.term.term === "LowToHigh"){
-      let imgCards = this.props.items.sort((itemA, itemB ) => (itemA.price - itemB.price)  ).map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-      return  imgCards
-    } else if (this.props.term.term === "tunic"){
-
-      let imgCards = this.props.items.filter( item => item.category_name === "tunic").map(item =>
+    if (priceCategories.includes(term)){
+      return this.sortByPrice(term)
+    } else if (filterCategories.includes(term)){
+      return this.filterByCategory(term)
+    }  else if (colorCategories.includes(term) ){
+      let imgCards = this.props.items.filter( item => item.color.toLowerCase() === term.toLowerCase()).map(item =>
         <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
         return  imgCards
-    } else if (this.props.term.term === "dress"){
-      let imgCards = this.props.items.filter( item => item.category_name === "dress").map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-
-    } else if (this.props.term.term === "jumpsuit"){
-      let imgCards = this.props.items.filter( item => item.category_name === "jumpsuit").map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-
-    } else if(this.props.term.term === "bottom"){
-      let imgCards = this.props.items.filter( item => item.category_name === "bottom").map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-
-    } else if(this.props.term.term === "wedding"){
-      let imgCards = this.props.items.filter( item => item.category_name === "wedding").map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-    }else if (this.props.term.term === "top"){
-      let imgCards = this.props.items.filter( item => item.category_name === "top").map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-
-    } else if (this.props.term.term === "all"){
-      let imgCards= this.props.items.map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-      return  imgCards
-
-    } else if (this.props.term.term ){
-      let imgCards = this.props.items.filter( item => item.color.toLowerCase() === this.props.term.term.toLowerCase()).map(item =>
-        <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
-        return  imgCards
-
     }  else {
         let imgCards= this.props.items.map(item =>
           <Link key={item.id} to={`/item/${item.id}`}><ImgCard cardType="all-item" item={item}/></Link>)
@@ -81,18 +40,12 @@ class ImgContainer extends Component {
     }
   }
 
-
-
   render() {
-
     return (
         <Card.Group itemsPerRow={6}>{this.filterItems()}</Card.Group>
     );
   }
 }
-
-
-
 const mapStateToProps = (state) => {
 console.log(state.term);
 //   console.log(state)
