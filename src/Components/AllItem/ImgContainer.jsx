@@ -46,15 +46,13 @@ class ImgContainer extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
-console.log(state.term);
-//   console.log(state)
+// console.log(state.term);
   return {
     items: state.items,
     term: state.term
-
   }
 }
-
 
 export default connect(mapStateToProps, {sortItems})(ImgContainer);
