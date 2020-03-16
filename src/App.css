@@ -41,8 +41,9 @@ font-family: 'Philosopher', sans-serif; */
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Bree Serif', serif;
     font-weight: bold !important;
+    font-size: 1vw;
 
 
 }
@@ -57,7 +58,18 @@ i.icon.cart:before {
   padding: 2vw
 }
 
+.cartCount {
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-family: 'Monda', sans-serif;
+  top: 6px;
+right: 165px;
 
+
+}
 
 /* ----------------------------header menu------------------------------------ */
 .item.profile-link{
@@ -204,10 +216,12 @@ margin-right: -.75em !important;
 /* -------------------------------side bar ---------------------------------- */
   .ui.text.vertical.menu {
       position: fixed;
-      margin-left: 3vw;
+      margin-left: 2vw;
       margin-top: -110vw;
       width: 16rem;
       float: left;
+      font-family: 'Bree Serif', serif !important;
+      font-size: 0.99vw;
   }
 
 

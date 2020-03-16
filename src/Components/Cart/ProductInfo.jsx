@@ -17,7 +17,7 @@ class ProductInfo extends Component {
     .then(r => r.json())
     .then((data) => {
       console.log(data);
-      debugger
+      // debugger
       //was about to dispatch the action
       this.props.deleteFromCart(data.cart_item.id)
 

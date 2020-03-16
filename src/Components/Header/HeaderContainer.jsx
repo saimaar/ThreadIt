@@ -31,15 +31,19 @@ class HeaderContainer extends Component {
 
 
   render() {
-
+    let cartCount = this.props.cartItems ? this.props.cartItems.length : null
+    console.log(cartCount)
     // console.log(this.props);
 // console.log(this.props.user.username);
     return (
 
+
         <Segment className="main-header">
               <Link to={`/`}><img className="logo" src={logo}/></Link>
               <ul className="menu-right">
+                {cartCount > 0 ?  <span className="cartCount">{cartCount}</span> : null }
                 <Icon onClick={this.handleCart} disabled={localStorage.token ? false : true} name='cart' size='large' />
+
                 <Dropdown
                     text={this.props.user.username ? `Hey ${this.props.user.username}!` : "Hey User!" }
                     icon='user'
@@ -67,7 +71,8 @@ class HeaderContainer extends Component {
 const mapStateToProps=(state)=>{
   // console.log(state);
   return {
-    user : state.userInfo.user
+    user : state.userInfo.user,
+    cartItems: state.userInfo.user.cart_items
   }
 }
 
