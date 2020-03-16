@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'semantic-ui-react'
+import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
 import {saveUserToState} from '../../Redux/Actions/userActions'
 import { withRouter } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 
 class UserProfile extends Component {
@@ -22,13 +23,24 @@ class UserProfile extends Component {
     // console.log(this.props.user);
     let {username, email} = this.props.user
     return (
-      <div>
-        <h2>Username: {username}</h2>
-        <h2>email: {email}</h2>
-        <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
+      <Segment placeholder>
+        <Grid columns={2} relaxed='very' stackable>
+          <Grid.Column>
+            <h2>Username: <b>{username}</b></h2>
+
+              <h2>email: {email}</h2>
+              <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
 
 
-      </div>
+          </Grid.Column>
+
+          <Grid.Column verticalAlign='middle'>
+            <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big' /></Link>
+          </Grid.Column>
+        </Grid>
+
+        <Divider vertical>or</Divider>
+      </Segment>
     );
   }
 
@@ -42,3 +54,12 @@ const mapStateToProps=(state)=>{
 }
 
 export default connect(mapStateToProps, {saveUserToState})(withRouter(UserProfile));
+
+//
+// <div>
+//   <h2>Username: {username}</h2>
+//   <h2>email: {email}</h2>
+//   <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
+//
+//
+// </div>

@@ -6,9 +6,8 @@ class OrderContainer extends Component {
 
 
   render() {
-    console.log(this.props.orders);
+    // console.log(this.props.orders);
     let orderCard = this.props.orders ? this.props.orders.map(order => <OrderCard order={order}/>) : null
-
     return (
       <Segment>
         <b className= "order">Your order is being processed....</b>
