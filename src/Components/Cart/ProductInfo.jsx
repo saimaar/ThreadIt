@@ -25,8 +25,8 @@ class ProductInfo extends Component {
   }
 
   render() {
- // debugger
-    let {quantity, size, name, price, image, color} = this.props.cartItem.itemInfo
+  // debugger
+    let {size, name, price, image, color} = this.props.cartItem.item
     // console.log(this.props.cartItem);
      // console.log(quantity)
     return (

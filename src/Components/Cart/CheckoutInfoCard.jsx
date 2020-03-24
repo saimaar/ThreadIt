@@ -13,7 +13,8 @@ class CheckoutInfoCard extends Component {
  cartAmount=()=>{
 
     if(this.props.userCart && this.props.userCart.length > 0){
-      let price = this.props.userCart.map(cartItem => cartItem.itemInfo.price)
+
+      let price = this.props.userCart.map(cartItem => cartItem.item.price)
       // console.log(price);
       let totalPrice = price.reduce((total, num) => total + num)
       let result = totalPrice + 10
@@ -87,7 +88,6 @@ class CheckoutInfoCard extends Component {
 
     const shipping = 10
     let totalAmount = this.cartAmount()
-  console.log(totalAmount)
     let totalPrice = totalAmount - 10
     totalAmount = totalAmount ? totalAmount: totalAmount = "0"
     totalPrice = totalPrice ? totalPrice : totalPrice = "0"
@@ -104,7 +104,6 @@ class CheckoutInfoCard extends Component {
           <tr>
             <td>Shipping</td>
             {this.props.userCart && this.props.userCart.length > 0  ?   <td>${shipping}</td> : <td>${0}</td>  }
-
           </tr>
           <hr/>
           <tr>

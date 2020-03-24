@@ -43,6 +43,7 @@ class ShowContainer extends Component {
         'content-type' : 'application/json'
       },
       body: JSON.stringify( {
+        quantity: 1,
         item_id,
         cart_id: this.props.cart_id
       })
