@@ -146,8 +146,8 @@ const mapStateToProps=(state)=>{
   //put price in the state
   //and then call the action here
   return {
-    userCart : state.userInfo.user.cart_items,
-    user: state.userInfo.user,
+    userCart : state.userInfo.user.cart ? state.userInfo.user.cart.cart_items : null,
+    user: state.userInfo.user
   }
 }
 

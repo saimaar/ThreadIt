@@ -10,9 +10,10 @@ import emptyCartImg from './empty_cart.png'
 class ShoppingCartContainer extends Component {
 
   render() {
+    // debugger
     // console.log(this.props.cart);
     let cartCount = this.props.cart_items ? this.props.cart_items.length : null
-    console.log(cartCount)
+    // console.log(cartCount)
     let productInfo = this.props.cart_items ? this.props.cart_items.map(cartItem => <ProductInfo cartItem ={cartItem}/>) : null
     return (
 
@@ -35,10 +36,10 @@ class ShoppingCartContainer extends Component {
 }
 
 const mapStateToProps =(state)=>{
-
-  // console.log(state.userInfo.user.cart);
+  // debugger
+  console.log(state.userInfo.user.cart);
   return {
-    cart_items: state.userInfo.user.cart_items
+    cart_items: state.userInfo.user.cart ? state.userInfo.user.cart.cart_items : null
   }
 }
 export default connect(mapStateToProps)(ShoppingCartContainer);

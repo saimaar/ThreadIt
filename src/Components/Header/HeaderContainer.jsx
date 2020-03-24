@@ -32,7 +32,7 @@ class HeaderContainer extends Component {
 
   render() {
     let cartCount = this.props.cartItems ? this.props.cartItems.length : null
-    console.log(cartCount)
+    // console.log(cartCount)
     // console.log(this.props);
 // console.log(this.props.user.username);
     return (
@@ -72,7 +72,7 @@ const mapStateToProps=(state)=>{
   // console.log(state);
   return {
     user : state.userInfo.user,
-    cartItems: state.userInfo.user.cart_items
+    cartItems: state.userInfo.user.cart ? state.userInfo.user.cart.cart_items : null
   }
 }
 

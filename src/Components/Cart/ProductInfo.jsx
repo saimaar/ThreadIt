@@ -25,8 +25,10 @@ class ProductInfo extends Component {
   }
 
   render() {
-
-    let {name, price, image, color} = this.props.cartItem
+ // debugger
+    let {quantity, size, name, price, image, color} = this.props.cartItem.itemInfo
+    console.log(this.props.cartItem);
+     console.log(quantity)
     return (
     <Item className="product-info">
       <Item.Image src={`${image}`} size="small"/>

@@ -4,17 +4,18 @@ const initialUserState = {
 }
 
 const userReducer = (state = initialUserState, action) =>{
+// debugger
   // console.log(state);
-  // debugger
   switch (action.type) {
     case  "SAVE_USER":
     //state.concat(action.items)
       return {...state, ...action.payload}
 
     case 'ADD_ITEM':
+
+    // console.log(action.payload.item)
       return {...state, user: {
-        ...state.user,
-        cart_items: [...state.user.cart_items, action.payload.item]
+        ...state.user, cart: {...state.user.cart, cart_items: [...state.user.cart.cart_items, action.payload]}
         }
       }
 

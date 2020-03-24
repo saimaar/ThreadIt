@@ -17,11 +17,25 @@ class ShowContainer extends Component {
      showModal: false
   }
 
+
+  // uniqItems = (cartItems)=>{
+  //   let seenItems = {}
+  //   let uniqArr = []
+  //   cartItems.forEach((cartItem) => {
+  //     if(seenItems[cartItem.id] !== true){
+  //       uniqArr.push(cartItem)
+  //       seenItems[cartItem.id] = true
+  //       console.log(seenItems)
+  //     }
+  //     })
+  //   return uniqArr
+  // }
+
 // in this method, I am creating cart-item for the user
 //meaning the item that is selected by the user, will be attached to its
 //associate cart
   handleAddToCart=()=>{
-    // debugger
+
     let item_id = this.props.match.params.id
     fetch(`http://localhost:4000/cart_items`, {
       method : "POST",
@@ -35,10 +49,11 @@ class ShowContainer extends Component {
     }
   )
   .then(r => r.json())
-  .then((item) => {
-    // console.log(item);
-    this.props.addToCart(item);
+  .then((data) => {
+    console.log(data);
+    this.props.addToCart(data);
     })
+
   }
 
   closeModal = () => {
@@ -101,10 +116,8 @@ class ShowContainer extends Component {
       <div>
             <div className="show-cont">
               <div className ="show-div">
-                <ImgCard cardType="show-container" item={item}/>
+                <ImgCard key={item.length + 1} cardType="show-container" item={item}/>
                 </div>
-
-
                 <div className ="info-div">
                   <InfoCard item={item}/>
                     <Button disabled={!localStorage.token ? true : false} onClick={this.handleAddToCart} color='google plus'>
