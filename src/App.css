@@ -377,4 +377,5 @@ margin-left: 10vw;
     font-size: 1.5vw;
 }
 
-  .empty_cart{margin-top: -5vw;}
+.empty_cart{margin-top: -5vw;}
+.item-count{max-width: 2vw}

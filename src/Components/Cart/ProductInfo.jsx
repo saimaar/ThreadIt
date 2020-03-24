@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {deleteFromCart} from '../../Redux/Actions/cartItemAction'
-import { Segment, Image, Button, Grid, Item, Icon, Header} from 'semantic-ui-react'
+import {Form, Input, Segment, Image, Button, Grid, Item, Icon, Header} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 
 
@@ -8,7 +8,7 @@ class ProductInfo extends Component {
 
   handleDelete=()=>{
     // console.log('click me');
-    fetch(`http://localhost:4000/cartitem/delete/${this.props.cartItem.id}`, {
+    fetch(`http://localhost:4000/cartitem/delete/${this.props.cartItem.itemInfo.id}`, {
       method : 'DELETE',
       headers: {
           'Authorization': `bearer ${localStorage.token}`
@@ -17,7 +17,7 @@ class ProductInfo extends Component {
     .then(r => r.json())
     .then((data) => {
       console.log(data);
-      // debugger
+       // debugger
       //was about to dispatch the action
       this.props.deleteFromCart(data.cart_item.id)
 
@@ -27,8 +27,8 @@ class ProductInfo extends Component {
   render() {
  // debugger
     let {quantity, size, name, price, image, color} = this.props.cartItem.itemInfo
-    console.log(this.props.cartItem);
-     console.log(quantity)
+    // console.log(this.props.cartItem);
+     // console.log(quantity)
     return (
     <Item className="product-info">
       <Item.Image src={`${image}`} size="small"/>
@@ -40,8 +40,11 @@ class ProductInfo extends Component {
        <Item.Meta>
          <span className='price'>${price}</span>
        </Item.Meta>
-       <Icon name="trash alternate outline" onClick={this.handleDelete} />
-       <Header size="small">Remove Item</Header>
+       <Button style={{margin: 0}} icon="plus"/><Input className="item-count"/><Button icon="minus"/><br/>
+        <div>
+         <Button icon="trash alternate outline" onClick={this.handleDelete} />
+         <span size="small">Remove Item</span>
+        </div>
       </Item.Content>
     </Item>
 

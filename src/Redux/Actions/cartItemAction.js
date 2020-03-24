@@ -6,7 +6,7 @@ export const addToCart = (item) =>{
 }
 
 export const deleteFromCart = (id)=>{
-  console.log(id);
+  // console.log(id);
   return {
     type: "REMOVE_ITEM",
     payload: id

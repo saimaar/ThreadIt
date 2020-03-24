@@ -11,6 +11,8 @@ class ShoppingCartContainer extends Component {
 
   render() {
     // debugger
+// [...new Set(state.user.cart.cart_items.map(ct => ct.item_id))]
+    // debugger
     // console.log(this.props.cart);
     let cartCount = this.props.cart_items ? this.props.cart_items.length : null
     // console.log(cartCount)
