@@ -16,9 +16,6 @@ class ShoppingCartContainer extends Component {
     return (
 
     <Grid columns={2} relaxed='very'>
-      <p className="title-org">Everytime you shop here, 15% of your total amount will
-        be donated to the organization of your choice!
-      </p>
     <Grid.Column>
       <Item.Group  className="each-product" divided>
           {cartCount > 0 ? productInfo : <img className="empty_cart" src={emptyCartImg} alt="sorry your cart is empty"/>}

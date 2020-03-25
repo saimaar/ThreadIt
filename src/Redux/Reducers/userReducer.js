@@ -18,12 +18,16 @@ const userReducer = (state = initialUserState, action) =>{
       let itemIdx =  state.user.cart.cart_items ? state.user.cart.cart_items.findIndex(ct => ct.item_id === action.payload.item_id) : -1
       if (itemIdx < 0) {
         return {...state, user: {
-          ...state.user, cart: {...state.user.cart, cart_items: [...state.user.cart.cart_items, action.payload]}
+          ...state.user,
+          cart: {...state.user.cart,
+            cart_items: [...state.user.cart.cart_items, action.payload]}
           }
         }
       } else {
         return {...state, user: {
-          ...state.user, cart: {...state.user.cart, cart_items: [...state.user.cart.cart_items.slice(0, itemIdx), action.payload, ...state.user.cart.cart_items.slice(itemIdx + 1)]}
+          ...state.user,
+          cart: {...state.user.cart,
+            cart_items: [...state.user.cart.cart_items.slice(0, itemIdx), action.payload, ...state.user.cart.cart_items.slice(itemIdx + 1)]}
           }
         }
       }
@@ -31,7 +35,9 @@ const userReducer = (state = initialUserState, action) =>{
     case 'REMOVE_ITEM':
       let filteredCart = state.user.cart.cart_items.filter(cartItem => cartItem.id !== action.payload)
        // console.log(filteredCart);
-      return {...state, user: {...state.user, cart: {...state.user.cart, cart_items: [...filteredCart]}}
+      return {...state, user: {...state.user,
+         cart: {...state.user.cart,
+           cart_items: [...filteredCart]}}
       }
         //adding order to the order items
     case "ADD_ORDER" :

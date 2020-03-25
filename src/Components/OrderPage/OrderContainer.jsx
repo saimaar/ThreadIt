@@ -6,11 +6,12 @@ class OrderContainer extends Component {
 
 
   render() {
-    // console.log(this.props.orders);
+debugger
     let orderCard = this.props.orders ? this.props.orders.map(order => <OrderCard order={order}/>) : null
+    let orderLength = this.props.orders ? this.props.orders.length : null
     return (
       <Segment>
-        <b className= "order">Your order is being processed....</b>
+        <b className= "order">{orderLength <= 0 ? "Orders List is empty" : "Order is being processed"}</b>
         {orderCard}
       </Segment>
     );
