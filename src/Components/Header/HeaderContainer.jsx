@@ -41,7 +41,7 @@ class HeaderContainer extends Component {
               <Link to={`/`}><img className="logo" src={logo}/></Link>
               <ul className="menu-right">
                 {cartCount > 0 ?  <span className="cartCount">{cartCount}</span> : null }
-                <Icon onClick={this.handleCart} disabled={localStorage.token ? false : true} name='cart' size='large' />
+                <Icon onClick={this.handleCart}  name='cart' size='large' />
 
                 <Dropdown
                     text={this.props.user.username ? `Hey ${this.props.user.username}!` : "Hey User!" }

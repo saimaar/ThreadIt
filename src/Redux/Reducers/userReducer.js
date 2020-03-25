@@ -1,5 +1,5 @@
 const initialUserState = {
-  user: {},
+  user: {cart: {cart_items: []}},
   token: ""
 }
 
@@ -7,13 +7,15 @@ const userReducer = (state = initialUserState, action) =>{
 // debugger
   // console.log(state);
   switch (action.type) {
+
     case  "SAVE_USER":
+    // debugger
     //state.concat(action.items)
       return {...state, ...action.payload}
 
     case 'ADD_ITEM':
-    // debugger
-      let itemIdx = state.user.cart.cart_items.findIndex(ct => ct.item_id === action.payload.item_id)
+     // debugger
+      let itemIdx =  state.user.cart.cart_items ? state.user.cart.cart_items.findIndex(ct => ct.item_id === action.payload.item_id) : -1
       if (itemIdx < 0) {
         return {...state, user: {
           ...state.user, cart: {...state.user.cart, cart_items: [...state.user.cart.cart_items, action.payload]}
@@ -41,7 +43,7 @@ const userReducer = (state = initialUserState, action) =>{
     case "EMPTY_CART":
       return {...state, user: {
             ...state.user,
-            cart_items: []
+            cart: {...state.user.cart, cart_items: []}
           }
         }
     case "ADD_REVIEW" :

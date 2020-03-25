@@ -36,7 +36,7 @@ class ShowContainer extends Component {
 //associate cart
   handleAddToCart=()=>{
 
-    let item_id = this.props.match.params.id
+    let item_id = parseInt(this.props.match.params.id)
     fetch(`http://localhost:4000/cart_items`, {
       method : "POST",
       headers: {
@@ -52,6 +52,7 @@ class ShowContainer extends Component {
   .then(r => r.json())
   .then((data) => {
     console.log(data);
+    // debugger
     this.props.addToCart(data);
     })
 
