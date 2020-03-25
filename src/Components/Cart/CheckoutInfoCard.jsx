@@ -11,10 +11,9 @@ import {emptyCartItem} from '../../Redux/Actions/cartItemAction'
 class CheckoutInfoCard extends Component {
 
  cartAmount=()=>{
-
+// debugger
     if(this.props.userCart && this.props.userCart.length > 0){
-
-      let price = this.props.userCart.map(cartItem => cartItem.item.price)
+      let price = this.props.userCart.map(uc => uc.item.price * uc.quantity)
       // console.log(price);
       let totalPrice = price.reduce((total, num) => total + num)
       let result = totalPrice + 10

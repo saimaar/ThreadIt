@@ -37,8 +37,6 @@ class HeaderContainer extends Component {
     // console.log(this.props);
 // console.log(this.props.user.username);
     return (
-
-
         <Segment className="main-header">
               <Link to={`/`}><img className="logo" src={logo}/></Link>
               <ul className="menu-right">
