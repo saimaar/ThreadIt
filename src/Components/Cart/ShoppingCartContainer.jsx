@@ -35,7 +35,7 @@ class ShoppingCartContainer extends Component {
 
 const mapStateToProps =(state)=>{
   // debugger
-  console.log(state.userInfo.user.cart);
+  // console.log(state.userInfo.user.cart);
   return {
     cart_items: state.userInfo.user.cart ? state.userInfo.user.cart.cart_items : null
   }

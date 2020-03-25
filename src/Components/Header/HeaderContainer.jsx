@@ -32,7 +32,7 @@ class HeaderContainer extends Component {
 
   render() {
     // debugger
-    let cartCount = this.props.cartItems ? this.props.cartItems.map(ct => ct.quantity).reduce((total,num) => total + num ) : null
+    let cartCount = this.props.cartItems ? this.props.cartItems.map(ct => ct.quantity).reduce((total,num) => {return total + num }, 0) : null
     // console.log(cartCount)
     // console.log(this.props);
 // console.log(this.props.user.username);
