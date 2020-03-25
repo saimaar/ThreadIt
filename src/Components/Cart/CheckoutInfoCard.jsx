@@ -58,7 +58,7 @@ class CheckoutInfoCard extends Component {
   // token is the user id and you dont need to think about how to get access to user
 
     handleToken=(token, address)=>{
-      console.log(address);
+      // console.log(address);
       let formattedAdress = this.formatAddress(address)
       const charge = {
           token: token.id

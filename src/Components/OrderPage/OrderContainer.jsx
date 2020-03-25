@@ -6,7 +6,7 @@ class OrderContainer extends Component {
 
 
   render() {
-debugger
+// debugger
     let orderCard = this.props.orders ? this.props.orders.map(order => <OrderCard order={order}/>) : null
     let orderLength = this.props.orders ? this.props.orders.length : null
     return (
