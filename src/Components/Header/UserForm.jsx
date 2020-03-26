@@ -30,9 +30,10 @@ class UserForm extends Component {
       <div>
         <form className="user-form" onSubmit={this.handleSubmit}>
           <h1 className="reg-login">{this.props.formType === "login" ? "Login" : "Register"}</h1>
-          <label htmlFor="username"></label><br/>
+          <label htmlFor="username">Username:</label><br/>
             <input
               type="text"
+              id="user-input"
               autoComplete="off"
               name="username"
               placeholder="Username....."
@@ -40,8 +41,9 @@ class UserForm extends Component {
               onChange={this.handleAllChange}/><br/>
             { this.props.formType !== "login" ?
               <div>
-            <label htmlFor="email"></label><br/>
+            <label htmlFor="email">e-mail:</label><br/>
               <input type="email"
+                id="user-input"
                 autoComplete="off"
                 placeholder="e-mail....."
                 name="email"
@@ -49,14 +51,16 @@ class UserForm extends Component {
                 onChange={this.handleAllChange}/><br/>
             </div> : null }
 
-            <label htmlFor="password"></label><br/>
-            <input type="password"
+            <label htmlFor="password">password:</label><br/>
+            <input
+              id="user-input"
+              type="password"
               autoComplete="off"
               name="password"
               placeholder="Password....."
               value={this.state.password}
               onChange={this.handleAllChange}/><br/>
-            <input type="submit" value="Submit"/>
+            <input id="user-button" type="submit" value="Submit"/>
         </form>
       </div>
     );

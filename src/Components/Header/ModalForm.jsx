@@ -8,8 +8,7 @@ class ModalForm extends Component {
   render() {
     return (
       <Modal className="user-modal" trigger={<Button>{this.props.formType === "login" ? "login" : "register"}</Button>}>
-          <Modal.Description>
-            <Header className="hey-guest">Hey Guest!</Header>
+          <Modal.Description className="form-desc">
             <UserForm  formType={this.props.formType} handleRegister={this.props.handleRegister} handleLogin={this.props.handleLogin}/>
           </Modal.Description>
       </Modal>

@@ -99,18 +99,43 @@ margin-left: 1.54vw;
 .user-modal{
   text-align: center !important;
   font-size: large !important;
-  width: 35vw !important;
-  height: 41vw !important;
+  width: 500px !important;
+  height: 200px !important;
 }
 
 /* userform  */
 .user-form{
-  color: teal;
-  width: 100%;
-  padding: 14vw 4vw;
-  background: url('./formpic.jpg');
+  font-family: 'Simonetta', cursive;
+  display: table;
+  background-color: aliceblue;
+  margin: auto !important;
+}
+.form-desc{
+margin-top: -32px;
+border-radius: 5px;
+background-color: aliceblue;
+padding: 100px;
 }
 
+#user-input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#user-button{
+background-color: #e6815c;
+border: none;
+color: white;
+padding: 1vw 3vh;
+text-decoration: none;
+margin: 2vw 1vh;
+cursor: pointer;
+}
 .reg-login{
     font-family: 'Sacramento', cursive;
 }
