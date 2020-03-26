@@ -127,7 +127,6 @@ class ShowContainer extends Component {
                     </Button>
                       <Modal className="rev-modal"  open={this.state.showModal} trigger={<Button disabled={localStorage.token ? false : true} onClick={this.openModal}>Review this item</Button>}>
                         <Modal.Description >
-                          <Header className="rev-matter">Your Review Matters!</Header>
                           <ReviewForm closeModal={this.closeModal} handleReview={this.handleReview}/>
                         </Modal.Description>
                       </Modal>

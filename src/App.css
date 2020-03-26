@@ -78,10 +78,6 @@ padding: -1vw;
 margin-left: 3vw;
 }
 
-#profile-info{
-
-}
-
 .item.logout-link{margin: 2vw;
 
 padding: 1vw;
@@ -329,14 +325,37 @@ display: grid;
 
 /* ---------------------------shoppingCart------------------------------------ */
   .review-form{
-    margin-top: 2vw !important;
-    margin-left: 5vw !important;
-    width: 40vw !important;
-    height: 20vw !important;
-
-  }
+    margin-left: 5vw;
+    margin-bottom: 23vw;
+    display: table;
+    background-color: aliceblue;
+    margin-top: 3vw;
+}
+#rev-text{
+  margin-top: 1vw;
+  width: 20vw;
+  height: 15vh;
+  border: none;
+  font-size: 20px;
+}
   .review-r{
+    margin-top: 1vw;
     margin-left: 7vw
+  }
+  #rev-sub{
+display: inline-block;
+border-radius: 4px;
+background-color: #e6815c;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 20px;
+padding: 0.5vw ;
+width: 10vh 10vw;
+transition: all 0.5s;
+cursor: pointer;
+margin: 2vw 1vh;
+margin-left: 7.5vw
   }
 
   .rev-matter{

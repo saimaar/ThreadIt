@@ -40,8 +40,8 @@ class ReviewForm extends Component {
         defaultRating={1}
         maxRating={5} /><br/>
         <textarea
-          style ={{width: "50%"}}
-          rows="4"
+        id="rev-text"
+         rows="4"
          cols="50"
          name="comment"
          value={this.state.comment}
@@ -49,7 +49,7 @@ class ReviewForm extends Component {
          placeholder="...Review your item here"
          />
        <br/>
-       <input type="submit" value="submit"/>
+       <input id="rev-sub" type="submit" value="submit"/>
      </form>
     );
   }
