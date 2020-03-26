@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
+import {Card, Image, Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
 import {saveUserToState} from '../../Redux/Actions/userActions'
 import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
@@ -22,16 +22,18 @@ class UserProfile extends Component {
   render() {
     // console.log(this.props.user);
     let {username, email} = this.props.user
+
     return (
       <Segment placeholder>
-        <Grid columns={2} relaxed='very' stackable>
+        <Grid columns={2}>
           <Grid.Column>
-            <h2>Username: <b>{username}</b></h2>
-
-              <h2>email: {email}</h2>
+            <Segment id="profile-info">
+              <h3>Username:</h3>
+              <h4>{username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</h4>
+              <h3> email:</h3>
+              <h4>{email}</h4>
+            </Segment>
               <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
-
-
           </Grid.Column>
 
           <Grid.Column verticalAlign='middle'>
