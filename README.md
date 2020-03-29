@@ -10,7 +10,7 @@
 - Custom CSS3 styling
 - Stripe API
 
-**Backend**
+**[Backend](https://github.com/saimaar/threadIt-API)**
 - Ruby [2.6.1]
 - Rails [~> 5.2.3] - MVC web framework used as an API
 - Bcrypt [~> 3.1.7] - Gem for encryption and securing user passwords
