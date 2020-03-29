@@ -22,4 +22,4 @@
 
 ## Code Guide 
 If you would like to take a closer look at the code behind the ThreadIt App, the best folders to look in are:
-- [index.js](/threadIt-Frontend/src/index.js)
+- [index.js](.../src/index.js)
