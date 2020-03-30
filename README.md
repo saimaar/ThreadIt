@@ -50,4 +50,5 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ![image](src/image-folder/img3.png)
 ---
 ### Show Page 
+![image](src/image-folder/Screen Shot 2020-03-30 at 7.56.12 AM.png)
 
