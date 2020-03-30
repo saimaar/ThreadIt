@@ -49,4 +49,5 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ### All Items Page 
 ![image](src/image-folder/img3.png)
 ---
+### Show Page 
 
