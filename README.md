@@ -1,5 +1,5 @@
    #                                                  ThreadIt
-**ThreadIt** is a shopping website, created by Saima Rahman. This website was inspired by an Indian Designer, [Anita Dongre](https://us.anitadongre.com/), her idea on **sustainable** clothing, **fair-wage** and as well as **women empowerment**! Some of the images have been taken from her website. Checkout my **[live demo here]**(https://youtu.be/lICVRHI37vw).
+**ThreadIt** is a shopping website, created by Saima Rahman. This website was inspired by an Indian Designer, [Anita Dongre](https://us.anitadongre.com/), her idea on **sustainable** clothing, **fair-wage** and as well as **women empowerment**! Some of the images have been taken from her website. Checkout my **[live demo here](https://youtu.be/lICVRHI37vw)**.
   
    ## Tech Stack 
 **Frontend** 
@@ -32,7 +32,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
    - Session is authenticated in the backend. All queries return data that corresponds to the proper user.
    - Users can sign up and log in from any page in the app.
 - Create 
-   - User can create an order for any item or items
+   - User can create an order for any item or items**
 - Reviews on Items
    - Users can post reviews for different items.
 - Filter/Sort 
