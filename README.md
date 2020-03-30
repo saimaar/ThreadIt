@@ -28,6 +28,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 - [React Components](src/Components)
 - [Redux Folder](src/Redux)
 - [App.js](src/App.js)
+- [Models Img](src/image-folder/Models.png) 
 
 ## Features
 - Authentication
