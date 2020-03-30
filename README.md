@@ -1,5 +1,5 @@
    #                                                  ThreadIt
-**ThreadIt** is a shopping website, created by Saima Rahman. This website was inspired by an Indian Designer, [Anita Dongre](https://us.anitadongre.com/), her idea on **sustainable** clothing, **fair-wage** and as well as **women empowerment**! Some of the images have been taken from her website. Checkout my **[live demo here](https://youtu.be/lICVRHI37vw)**.
+**ThreadIt** is a shopping website, created by Saima Rahman. This website was inspired by an Indian Designer, [Anita Dongre](https://us.anitadongre.com/), her idea on **sustainable** clothing, **fair-wage** and as well as **women empowerment**! Some of the images have been taken from her website. 
   
    ## Tech Stack 
 **Frontend** 
