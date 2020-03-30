@@ -54,4 +54,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ---
 ### Show Page 
 ![image](src/image-folder/img7.png)
+---
+### Cart Items
+![image](src/image-folder/img5.png)
 
