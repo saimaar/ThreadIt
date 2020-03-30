@@ -46,7 +46,6 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 - Delete
    - Users can delete their account
 ## Screenshots 
-###Login/Register
-![image](src/image-folder/img1.png)
-![image](src/image-folder/img2.png)
+### All Items Page 
+![image](src/image-folder/img3.png)
 
