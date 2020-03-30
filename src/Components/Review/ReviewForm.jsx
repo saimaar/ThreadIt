@@ -11,7 +11,6 @@ class ReviewForm extends Component {
 
   handleSubmit=(evt)=>{
     evt.preventDefault()
-    this.props.closeModal()
     this.props.handleReview(this.state)
   }
 

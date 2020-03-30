@@ -21,7 +21,7 @@ class ImgCard extends Component {
   }
 
   homeItemImage =(image)=>{
-    return  <Image src={image} /> 
+    return  <Image src={image} />
   }
 
   finaleImageCard =(image, price, name, designer)=>{
@@ -40,7 +40,6 @@ class ImgCard extends Component {
     let {image, price, name, designer} = this.props.item
     // console.log(this.props.item);
     return (
-
       <>
       {this.finaleImageCard(image, price, name, designer)}
       </>
