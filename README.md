@@ -32,7 +32,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
    - Session is authenticated in the backend. All queries return data that corresponds to the proper user.
    - Users can sign up and log in from any page in the app.
 - Create 
-   - User can create an order for any item or items**
+   - User can create an order for any item or items
 - Reviews on Items
    - Users can post reviews for different items.
 - Filter/Sort 
