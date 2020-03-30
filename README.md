@@ -38,5 +38,10 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 - Filter/Sort 
    - Users can filter items by color & category
    - Users can sort items by Highest/Lowest Price
+- Add Items
+   - Users can add items to their cart 
+- Update/Remove Cart Items
+   - Users can update Cart Item quantity
+   - Users can delete Cart Items
 - Delete
-   Users can delete their account
+   - Users can delete their account
