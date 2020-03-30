@@ -47,5 +47,5 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
    - Users can delete their account
 ## Screenshots 
 
-![Alt text](file:///Users/saimarahman/Desktop/Development/Screen%20Shot%202020-03-29%20at%2010.04.03%20PM.png)
+![image](src/image-folder/img1.png)
 
