@@ -6,11 +6,12 @@
    ## Tech Stack 
 **Frontend** 
 - React.js
-- React Router - Declarative Routing
+- React Router [^5.1.2] - Declarative Routing
+- React Router Dom [^5.1.2] - Declarative Routing
 - Redux [4.0.5]
 - Semantic UI React
 - Custom CSS3 styling
-- Stripe API
+- React Stripe Checkout [^2.6.3] 
 
 **[Backend ~ API](https://github.com/saimaar/threadIt-API)**
 - Ruby [2.6.1]
