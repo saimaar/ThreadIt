@@ -78,7 +78,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 **Frontend Installation:**
 
 - Clone this repo to your local machine git clone <this-repo-url>
-- Ensure your Backend API is running at http://localhost:3000/
+- Ensure your Backend API is running at http://localhost:4000/
 - run npm install to install all dependencies
 - run npm start to start server
-- When prompted, ensure Frontend is running at http://localhost:3001
+- When prompted, ensure Frontend is running at http://localhost:3000
