@@ -64,3 +64,21 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ### Review/Ratings 
 ![image](src/image-folder/img4.png)
 
+## Installing
+**Backend Installation:**
+
+- Clone backend repo to your local machine git clone <backend-repo-url>
+- run bundle install to install required dependencies
+- Ensure you have PostgreSQL running
+- run rails db:create to create a database locally.
+- run rails db:migrate to create tables into the database.
+- run rails db:seed to create seed data.
+- run rails s -p 4000 to run the server.
+   
+**Frontend Installation:**
+
+- Clone this repo to your local machine git clone <this-repo-url>
+- Ensure your Backend API is running at http://localhost:3000/
+- run npm install to install all dependencies
+- run npm start to start server
+- When prompted, ensure Frontend is running at http://localhost:3001
