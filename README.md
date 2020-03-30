@@ -57,4 +57,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ---
 ### Cart Items
 ![image](src/image-folder/img5.png)
+---
+### Review/Ratings 
+![image](src/image-folder/img4.png)
 
