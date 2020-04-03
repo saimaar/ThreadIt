@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import {Switch, Route} from 'react-router'
+import Footer from './Components/Footer'
 import HomeContainer from './Components/Home/HomeContainer'
 import HeaderContainer from './Components/Header/HeaderContainer'
 import AllItemContainer from './Components/AllItem/AllItemContainer'
@@ -116,6 +117,7 @@ class App extends Component {
           <Route path ='/about' component={AboutPage}/>
           <Route path ='/wedding' component={Wedding}/>
         </Switch>
+        <Footer/>
       </div>
     );
   }
