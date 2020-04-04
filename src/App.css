@@ -47,6 +47,10 @@ font-family: 'Philosopher', sans-serif; */
 
 
 }
+
+.prof.ui.grid {
+padding: 175px
+}
 /* cart icon */
 i.icon.cart:before {
     content: "\f07a";
@@ -78,6 +82,10 @@ padding: -1vw;
 margin-left: 3vw;
 }
 
+#profile-info{
+  margin-left: -44px;
+  margin-right: 48px;
+}
 .item.logout-link{margin: 2vw;
 
 padding: 1vw;
@@ -199,15 +207,6 @@ margin-top: 2vw !important
   height: 121vw;
   font-size: 2vw !important
 }
-
-/*
-font-family: 'Simonetta', cursive;
-font-family: 'Monda', sans-serif;
-font-family: 'Courgette', cursive;
-font-family: 'Great Vibes', cursive;
-font-family: 'Old Standard TT', serif;
-font-family: 'Cookie', cursive;
-font-family: 'Philosopher', sans-serif; */
 
 .wed1-ptag{
   margin-top: 2vw;
@@ -442,7 +441,14 @@ font-family: 'Monda', sans-serif;
 .empty_cart{margin-top: -5vw;}
 .item-count{max-width: 2vw}
 
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 #footer{
+padding: 20px;
 background-color: lightgray;
+width: 100%;
+bottom: 0;
+left: 0;
 }

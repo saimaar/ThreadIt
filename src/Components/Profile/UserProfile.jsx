@@ -24,16 +24,18 @@ class UserProfile extends Component {
     let {username, email} = this.props.user
 
     return (
-      <Segment placeholder>
-        <Grid columns={2}>
+
+      <Segment className="prof">
+        <Grid className="prof" columns={2}>
           <Grid.Column>
             <Segment id="profile-info">
               <h3>Username:</h3>
               <h4>{username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</h4>
               <h3> email:</h3>
               <h4>{email}</h4>
-            </Segment>
               <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
+            </Segment>
+
           </Grid.Column>
 
           <Grid.Column verticalAlign='middle'>
@@ -43,6 +45,8 @@ class UserProfile extends Component {
 
         <Divider vertical>or</Divider>
       </Segment>
+
+
     );
   }
 
