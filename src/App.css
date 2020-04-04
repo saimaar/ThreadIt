@@ -184,11 +184,16 @@ margin-top: 2vw !important
   font-size: 4vw !important;
   color: white
 }
+
+.wed-look-book{
+  font-family: 'Cookie', cursive
+
+}
 .wed-look{
   /* margin-left: 1vw;
   margin-right: 1vw; */
-  background-color: black !important;
-  color: white;
+  background-color: white !important;
+  color: black;
   width: 100vw;
   height: 121vw;
   font-size: 2vw !important
@@ -217,10 +222,8 @@ margin-top: 2vw !important
 }
 
 .wed3-img{
-
-  margin-left: 7vw !important;
+  margin-left: 2vw;
   margin-top: -4vw;
-
 }
 
 /*------------------------- all items images card ------------------------------*/
