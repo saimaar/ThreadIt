@@ -427,3 +427,8 @@ font-family: 'Monda', sans-serif;
 
 .empty_cart{margin-top: -5vw;}
 .item-count{max-width: 2vw}
+
+
+#footer{
+background-color: lightgray;
+}
