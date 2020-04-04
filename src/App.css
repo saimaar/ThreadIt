@@ -186,7 +186,8 @@ margin-top: 2vw !important
 }
 
 .wed-look-book{
-  font-family: 'Cookie', cursive
+  font-family: 'Cookie', cursive;
+  font-size: 3vw !important;
 
 }
 .wed-look{
@@ -199,21 +200,31 @@ margin-top: 2vw !important
   font-size: 2vw !important
 }
 
+/*
+font-family: 'Simonetta', cursive;
+font-family: 'Monda', sans-serif;
+font-family: 'Courgette', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Cookie', cursive;
+font-family: 'Philosopher', sans-serif; */
+
 .wed1-ptag{
   margin-top: 2vw;
   margin-right: 14vw !important;
   margin-left: 36vw !important;
-  font-family: 'Simonetta', cursive;
+  font-family: 'Philosopher', sans-serif;
 }
 .wed2-ptag{
   margin-top: -12vw;
   margin-right: 14vw !important;
   margin-left: 36vw !important;
-  font-family: 'Simonetta', cursive;
+  font-family: 'Philosopher', sans-serif;
 }
 
 .wed3-ptag{
-      font-family: 'Simonetta', cursive;
+      font-family: 'Philosopher', sans-serif;
+      margin: 17px;
 }
 
 .wed4-ptag{
