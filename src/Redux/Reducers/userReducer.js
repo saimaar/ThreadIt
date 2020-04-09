@@ -1,6 +1,7 @@
 const initialUserState = {
   user: {cart: {cart_items: []}},
-  token: ""
+  token: "",
+  error: "",
 }
 
 const userReducer = (state = initialUserState, action) =>{
@@ -9,9 +10,11 @@ const userReducer = (state = initialUserState, action) =>{
   switch (action.type) {
 
     case  "SAVE_USER":
-    // debugger
     //state.concat(action.items)
       return {...state, ...action.payload}
+
+    case "SAVE_ERROR":
+      return {...state, error: action.payload}
 
     case 'ADD_ITEM':
      // debugger

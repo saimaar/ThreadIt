@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 class UserForm extends Component {
   state ={
@@ -23,7 +24,6 @@ class UserForm extends Component {
     }
 
   }
-
 
   render() {
     return (
@@ -60,6 +60,7 @@ class UserForm extends Component {
               placeholder="Password....."
               value={this.state.password}
               onChange={this.handleAllChange}/><br/>
+             <p className="invalid-logins">{this.props.error}</p>
             <input id="user-button" type="submit" value="Submit"/>
         </form>
       </div>
@@ -68,4 +69,10 @@ class UserForm extends Component {
 
 }
 
-export default UserForm;
+const mapStateToProps=(state)=>{
+  return {
+    error: state.userInfo.error
+  }
+}
+
+export default connect(mapStateToProps)(UserForm);

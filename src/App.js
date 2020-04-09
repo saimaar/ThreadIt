@@ -14,7 +14,7 @@ import OrderContainer from './Components/OrderPage/OrderContainer'
 import AboutPage from './Components/Home/AboutPage'
 import Wedding from './Components/Home/Wedding'
 import {renderItems} from './Redux/Actions/renderItems'
-import {saveUserToState} from './Redux/Actions/userActions'
+import {saveUserToState, saveErrorToState} from './Redux/Actions/userActions'
 
 
 class App extends Component {
@@ -55,6 +55,8 @@ class App extends Component {
         //is coming from the backend to the key of token
         // localStorage.setItem('token', user.token)
         this.props.history.push('/')
+      } else {
+        this.props.saveErrorToState(user.error);
       }
     })
   }
@@ -128,7 +130,8 @@ class App extends Component {
                               //dispatching action here === mapDispatchToProps
 export default connect(null,
    {renderItems,
-  saveUserToState} )
+  saveUserToState,
+saveErrorToState} )
   (withRouter(App));
 //1. first argument how we get info from the application state
 //2. second argument how we send info to the application state (setting the state)
