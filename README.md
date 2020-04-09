@@ -30,6 +30,7 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 - [Redux Folder](src/Redux)
 - [App.js](src/App.js)
 - [Models Img](src/image-folder/Models.png) 
+- [Stripe API](src/Components/Cart/CheckoutInfoCard.jsx)
 
 ## Features
 - Authentication
