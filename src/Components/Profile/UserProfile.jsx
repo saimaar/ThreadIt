@@ -24,10 +24,10 @@ class UserProfile extends Component {
     let {username, email} = this.props.user
 
     return (
-        <Segment id="profile-info">
-          <Grid >
+<div className="profile-info">
+      <Grid className="prof-grid" >
      <Grid.Column floated="left" verticalAlign="middle">
-        <Icon  name="user circle" size='huge'></Icon><br/>
+        <Icon  name="user circle" size='massive'></Icon><br/>
           <Label  size="big">Username: {username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</Label><br/>
           <Divider/>
           <Label  size="big">e-mail: {email}</Label><br/>
@@ -35,15 +35,14 @@ class UserProfile extends Component {
           <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big'/></Link>
           <Divider/>
           <Button onClick={this.handleDelete} color='red' content='Delete Account'/>
-
      </Grid.Column>
 
 
    </Grid>
 
+</div>
 
 
-    </Segment>
     );
   }
 

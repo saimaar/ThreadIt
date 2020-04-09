@@ -82,8 +82,12 @@ padding: -1vw;
 margin-left: 3vw;
 }
 
-#profile-info{
+.profile-info{
+ padding: 20vw;
+}
 
+.prof-grid{
+  margin-top: -16vw !important;
 }
 .item.logout-link{margin: 2vw;
 
