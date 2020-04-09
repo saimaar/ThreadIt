@@ -15,7 +15,7 @@ class ShoppingCartContainer extends Component {
     let productInfo = this.props.cart_items ? this.props.cart_items.map(cartItem => <ProductInfo cartItem ={cartItem}/>) : null
     return (
 
-    <Grid columns={2} relaxed='very'>
+    <Grid className="main-cart-grid" columns={2} relaxed='very'>
     <Grid.Column>
       <Item.Group  className="each-product" divided>
           {cartCount > 0 ? productInfo : <img className="empty_cart" src={emptyCartImg} alt="sorry your cart is empty"/>}

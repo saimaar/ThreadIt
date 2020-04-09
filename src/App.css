@@ -243,6 +243,10 @@ margin-top: 2vw !important
 }
 
 /*------------------------- all items images card ------------------------------*/
+.main-cart-grid{
+  padding-bottom: 20vw !important;
+}
+
 
 .ui.card:last-child {
   margin-bottom: 2vw !important;
