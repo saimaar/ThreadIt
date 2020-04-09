@@ -4,10 +4,6 @@
 <p align="center">
   <img max-height: 90% width="100%" src="src/image-folder/img3.png" alt="img of the app">
 </p>
-  
-
-
-
 ## :arrow_forward: Checkout my demo [here](https://youtu.be/qzQDJL2lFHw).
   
    ## Tech Stack 
@@ -58,11 +54,9 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 - Delete
    - Users can delete their account
 ## Screenshots 
-### Login/Register 
-![image](src/image-folder/img1.png)
----
-### Show Page 
-![image](src/image-folder/img7.png)
+Login/Register           |  Show Page 
+:-------------------------:|:-------------------------:
+![image](src/image-folder/img1.png) |  ![image](src/image-folder/img7.png)
 ---
 ### Cart Items
 ![image](src/image-folder/img5.png)
