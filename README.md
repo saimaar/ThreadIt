@@ -1,4 +1,5 @@
 <h1 align="center">ThreadIt:shopping:</h1> ThreadIt
+
 **ThreadIt** is a shopping website, created by Saima Rahman. This website was inspired by an Indian Designer, [Anita Dongre](https://us.anitadongre.com/), her idea on **sustainable** clothing, **fair-wage** and as well as **women empowerment**! Some of the images have been taken from her website. 
 
 ## :arrow_forward: Checkout my demo [here](https://youtu.be/qzQDJL2lFHw).
