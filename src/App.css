@@ -448,6 +448,10 @@ font-family: 'Monda', sans-serif;
     font-size: 1.5vw;
 }
 
+.order-Segment{
+  padding-bottom: 50vw !important;
+}
+
 .empty_cart{margin-top: -5vw;}
 .item-count{max-width: 2vw}
 

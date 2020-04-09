@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Segment, Button} from 'semantic-ui-react'
+import {Segment, Button, Image} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 import OrderCard from './OrderCard'
+import emptyOrder from "./emptyOrder.png"
 class OrderContainer extends Component {
 
 
@@ -10,8 +11,9 @@ class OrderContainer extends Component {
     let orderCard = this.props.orders ? this.props.orders.map(order => <OrderCard order={order}/>) : null
     let orderLength = this.props.orders ? this.props.orders.length : null
     return (
-      <Segment>
-        <b className= "order">{orderLength <= 0 ? "Orders List is empty" : "Order is being processed"}</b>
+      <Segment className="order-Segment">
+        <b className= "order">{orderLength <= 0 ? <Image verticalAlign="middle" 
+ src={emptyOrder}/>: "Order is being processed"}</b>
         {orderCard}
       </Segment>
     );
