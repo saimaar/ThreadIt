@@ -58,12 +58,10 @@ Login/Register           |  Show Page
 :-------------------------:|:-------------------------:
 ![image](src/image-folder/img1.png) |  ![image](src/image-folder/img7.png)
 ---
-### Cart Items
-![image](src/image-folder/img5.png)
----
-### Review/Ratings 
-![image](src/image-folder/img4.png)
----
+Cart Items         |  Review/Ratings 
+:-------------------------:|:-------------------------:
+![image](src/image-folder/img5.png) | ![image](src/image-folder/img4.png)
+
 ### Stripe API 
 ![image](src/image-folder/img6.png)
 
