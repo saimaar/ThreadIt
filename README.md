@@ -65,6 +65,9 @@ If you would like to take a closer look at the code behind the ThreadIt App, the
 ---
 ### Review/Ratings 
 ![image](src/image-folder/img4.png)
+---
+### Stripe API 
+![image](src/image-folder/img6.png)
 
 ## Installing
 **Backend Installation:**
