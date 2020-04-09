@@ -4,6 +4,7 @@
 <p align="center">
   <img max-height: 90% width="100%" src="src/image-folder/img3.png" alt="img of the app">
 </p>
+
 ## :arrow_forward: Checkout my demo [here](https://youtu.be/qzQDJL2lFHw).  
 
    ## Tech Stack 
