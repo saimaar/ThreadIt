@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Header,Card, Image, Button, Divider, Form, Grid, Segment, Menu } from 'semantic-ui-react'
+import {Label, Header,Card, Icon, Button, Divider, Form, Grid, Segment, Menu } from 'semantic-ui-react'
 import {saveUserToState} from '../../Redux/Actions/userActions'
 import { withRouter } from 'react-router-dom'
 import {Link} from 'react-router-dom'
@@ -24,29 +24,20 @@ class UserProfile extends Component {
     let {username, email} = this.props.user
 
     return (
+        <Segment id="profile-info">
+          <Grid columns={2} relaxed='very' stackable>
+     <Grid.Column>
+        <Icon name="user circle" size='huge'></Icon><br/>
+          <Label size="big">Username: {username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</Label>
+     </Grid.Column>
+     <Grid.Column verticalAlign='middle'>
+       <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big'/></Link>
+     </Grid.Column>
+   </Grid>
 
-            <Segment id="profile-info">
-              <Grid className="prof">
-              <Grid.Column floated='left' width={3} >
-              <p>Username:</p>
-              <p>{username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</p>
-              <p> email:</p>
-              <p>{email}</p>
-              </Grid.Column>
-              <Divider/>
+      <Divider vertical>Or</Divider>
 
-            <Grid.Column floated='right' width={3}>
-            <Button onClick={this.handleDelete} basic color='red' content='Delete Account'/>
-            <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big' /></Link>
-            </Grid.Column>
-            </Grid>
-
-            </Segment>
-
-
-
-
-
+    </Segment>
     );
   }
 
