@@ -25,17 +25,23 @@ class UserProfile extends Component {
 
     return (
         <Segment id="profile-info">
-          <Grid columns={2} relaxed='very' stackable>
-     <Grid.Column>
-        <Icon name="user circle" size='huge'></Icon><br/>
-          <Label size="big">Username: {username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</Label>
+          <Grid >
+     <Grid.Column floated="left" verticalAlign="middle">
+        <Icon  name="user circle" size='huge'></Icon><br/>
+          <Label  size="big">Username: {username ? username.slice(0,1).toUpperCase() + username.slice(1) : null}</Label><br/>
+          <Divider/>
+          <Label  size="big">e-mail: {email}</Label><br/>
+          <Divider/>
+          <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big'/></Link>
+          <Divider/>
+          <Button onClick={this.handleDelete} color='red' content='Delete Account'/>
+
      </Grid.Column>
-     <Grid.Column verticalAlign='middle'>
-       <Link to={'./orders'}><Button content='order history' icon='unordered list' size='big'/></Link>
-     </Grid.Column>
+
+
    </Grid>
 
-      <Divider vertical>Or</Divider>
+
 
     </Segment>
     );
