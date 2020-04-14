@@ -21,7 +21,7 @@ class App extends Component {
 
   componentDidMount() {
     this.persistUser()
-    fetch(`http://localhost:4000/items`)
+    fetch(`https://thread-it-api.herokuapp.com/items`)
     .then(r => r.json())
     .then((items) => {
        // console.log(items);
