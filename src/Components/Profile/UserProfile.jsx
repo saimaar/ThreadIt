@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 class UserProfile extends Component {
   handleDelete=(evt)=>{
-    fetch(`http://localhost:4000/users/${this.props.user.id}`, {
+    fetch(`https://thread-it-api.herokuapp.com/users/${this.props.user.id}`, {
       method: 'DELETE'
     })
     .then(r => r.json())

@@ -33,7 +33,7 @@ class CheckoutInfoCard extends Component {
   handleProceedCheckout=(formattedAdress)=>{
 
     const userId = this.props.user.id
-    fetch(`http://localhost:4000/orders`, {
+    fetch(`https://thread-it-api.herokuapp.com/orders`, {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ class CheckoutInfoCard extends Component {
                 price: this.cartAmount() * 100
                 })
          };
-      fetch(`http://localhost:4000/charges`, config)
+      fetch(`https://thread-it-api.herokuapp.com/charges`, config)
       .then(res => res.json())
       .then((data) => {
         // console.log({token, address});

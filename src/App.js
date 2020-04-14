@@ -34,7 +34,7 @@ class App extends Component {
     //whatever object we are getting back from the input field
     //we are sending it to the backend as obj so no need to have curlys
     //after we login we get back the token
-    fetch('http://localhost:4000/login', {
+    fetch('https://thread-it-api.herokuapp.com/login', {
       method: "POST",
       headers:{
         "content-type": "application/json"
@@ -62,7 +62,7 @@ class App extends Component {
   }
 
   handleRegister=(userinfo)=>{
-    fetch('http://localhost:4000/users', {
+    fetch('https://thread-it-api.herokuapp.com/users', {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
@@ -88,7 +88,7 @@ class App extends Component {
     if(localStorage.getItem("token")){
       let token = localStorage.getItem('token')
       // console.log(token);
-      fetch('http://localhost:4000/persist', {
+      fetch('https://thread-it-api.herokuapp.com/persist', {
         headers: {
           'Authorization': `bearer ${localStorage.token}`
         }

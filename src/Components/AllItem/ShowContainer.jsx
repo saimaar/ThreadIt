@@ -22,7 +22,7 @@ class ShowContainer extends Component {
   handleAddToCart=()=>{
 
     let item_id = parseInt(this.props.match.params.id)
-    fetch(`http://localhost:4000/cart_items`, {
+    fetch(`https://thread-it-api.herokuapp.com/cart_items`, {
       method : "POST",
       headers: {
         'content-type' : 'application/json'
@@ -51,7 +51,7 @@ class ShowContainer extends Component {
     let item_id = this.props.match.params.id
     this.props.history.push(`/item/${item_id}`)
     let {comment, rating} = review
-    fetch(`http://localhost:4000/reviews`, {
+    fetch(`https://thread-it-api.herokuapp.com/reviews`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -73,7 +73,7 @@ class ShowContainer extends Component {
   componentDidMount() {
     // console.log(this.props);
     let item_id = this.props.match.params.id
-    fetch(`http://localhost:4000/items/${item_id}`)
+    fetch(`https://thread-it-api.herokuapp.com/items/${item_id}`)
     .then(r => r.json())
     .then((item) => {
       // console.log(item);

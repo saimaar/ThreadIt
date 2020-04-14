@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 class ProductInfo extends Component {
 
   handleDelete=()=>{
-    fetch(`http://localhost:4000/cartitem/remove/${this.props.cartItem.item_id}`, {
+    fetch(`https://thread-it-api.herokuapp.com/cartitem/remove/${this.props.cartItem.item_id}`, {
       method : 'DELETE',
       headers: {
           'Authorization': `bearer ${localStorage.token}`
@@ -21,7 +21,7 @@ class ProductInfo extends Component {
 
   handlePlus=()=>{
     let item_id = this.props.cartItem.item_id
-    fetch(`http://localhost:4000/cart_items`, {
+    fetch(`https://thread-it-api.herokuapp.com/cart_items`, {
       method : "POST",
       headers: {
         'content-type' : 'application/json'
@@ -40,7 +40,7 @@ class ProductInfo extends Component {
   }
 
   handleMinus=()=>{
-    fetch(`http://localhost:4000/cartitem/delete/${this.props.cartItem.id}`, {
+    fetch(`https://thread-it-api.herokuapp.com/cartitem/delete/${this.props.cartItem.id}`, {
       method : 'DELETE',
       headers: {
           'Authorization': `bearer ${localStorage.token}`
