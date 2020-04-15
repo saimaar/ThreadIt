@@ -88,7 +88,7 @@ class ShowContainer extends Component {
 
     let item = this.props.items.find(item => item.id == this.props.match.params.id) || this.state
     return (
-      <div>
+      <div className="main-show-div">
             <div className="show-cont">
               <div className ="show-div">
                 <ImgCard key={item.length + 1} cardType="show-container" item={item}/>
