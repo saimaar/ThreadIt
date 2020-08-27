@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import ImageCard from '../AllItem/ImgCard'
 import {connect} from 'react-redux'
 import {sortItems} from '../../Redux/Actions/cartItemAction'
+import { Carousel } from 'rsuite';
 
 class HomeContainer extends Component {
 
