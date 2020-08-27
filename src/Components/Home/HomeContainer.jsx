@@ -29,7 +29,14 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <Image className="home-image" onClick={this.handleHomeImage} src={bdWomen}/>
+      <Carousel autoplay className="custom-slider" className="home-image">
+        <img
+          onClick={this.handleHomeImage}
+          src={bdWomen}
+          height="250"
+        />
+      </Carousel>
+
         <Divider/>
         <Header className="home-one-h1">Shop Summery Jumpsuits!</Header>
       <Image.Group onClick={this.handleJumpsuit} className="jumpsuit-home" size='large'>
