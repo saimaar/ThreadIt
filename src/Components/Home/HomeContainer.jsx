@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Image, Divider, Header } from 'semantic-ui-react'
 import { withRouter } from 'react-router-dom'
 import bdWomen from './images/pic.png'
-import bdwomentwo from './images/g1.jpg'
 import {Link} from 'react-router-dom'
 import ImageCard from '../AllItem/ImgCard'
 import {connect} from 'react-redux'
@@ -30,23 +29,6 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-      <Carousel autoplay className="custom-slider" className="home-image">
-        <img
-          onClick={this.handleHomeImage}
-          src={bdWomen}
-          height="250"
-        />
-        <img
-          onClick={this.handleHomeImage}
-          src={bdwomentwo}
-          height="250"
-        />
-        <img
-          onClick={this.handleHomeImage}
-          src={bdWomen}
-          height="250"
-        />
-      </Carousel>
 
         <Divider/>
         <Header className="home-one-h1">Shop Summery Jumpsuits!</Header>
