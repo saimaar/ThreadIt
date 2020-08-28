@@ -29,7 +29,7 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-
+   <Image className="home-image" onClick={this.handleHomeImage} src={bdWomen}/>
         <Divider/>
         <Header className="home-one-h1">Shop Summery Jumpsuits!</Header>
       <Image.Group onClick={this.handleJumpsuit} className="jumpsuit-home" size='large'>
