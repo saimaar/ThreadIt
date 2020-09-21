@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "10.16.0"
+    "node": "10.16.0",
+    "npm": "3.10.3"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
