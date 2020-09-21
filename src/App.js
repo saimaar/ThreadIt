@@ -16,7 +16,6 @@ import Wedding from './Components/Home/Wedding'
 import {renderItems} from './Redux/Actions/renderItems'
 import {saveUserToState, saveErrorToState} from './Redux/Actions/userActions'
 
-
 class App extends Component {
 
   componentDidMount() {
