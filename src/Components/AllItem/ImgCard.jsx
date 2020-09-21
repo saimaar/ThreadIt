@@ -43,7 +43,6 @@ class ImgCard extends Component {
       <>
       {this.finaleImageCard(image, price, name, designer)}
       </>
-
     );
   }
 
