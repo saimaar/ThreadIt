@@ -26,6 +26,8 @@ font-family: 'Philosopher', sans-serif; */
 .main-header {
   height: 15vw;
   display: block;
+  background-repeat: no-repeat !important ;
+  background-image: url("https://i.pinimg.com/originals/79/b4/f6/79b4f6a7c09626e9325b8df792b12076.jpg") !important;
 }
 
 
@@ -171,13 +173,13 @@ margin-top: 2vw !important
   color: #ffcc66 !important;
 }
 .jumpsuit-home{
-  background-color: #ffcc66 !important;
-  border-style: dotted;
+  background-color: white;
+  /* border-style: dotted; */
 }
 
 .dress-home{
-  background-color: #FA8072 !important;
-  border-style: dotted;
+  background-color: white !important;
+
 }
 /*------------------------- About page ----------------------------------------*/
 .about-page{
@@ -463,8 +465,12 @@ html {
   min-height: 100%;
 }
 #footer{
-padding: 20px;
-background-color: lightgray;
+padding: 30px;
+background-position: right !important;
+background-size: 40vh;
+background-repeat: no-repeat;
+border-style:  outset;
+background-image: url("https://24.media.tumblr.com/f7639b75c02f458f4e7062cbac9c8587/tumblr_mg4ekpFiEf1rpedreo1_500.jpg") !important;
 width: 100%;
 bottom: 0;
 left: 0;

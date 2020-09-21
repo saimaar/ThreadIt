@@ -33,8 +33,12 @@ class HomeContainer extends Component {
         <Divider/>
         <Header className="home-one-h1">Shop Summery Jumpsuits!</Header>
       <Image.Group onClick={this.handleJumpsuit} className="jumpsuit-home" size='large'>
+
         <Image src="https://www.globaldesi.in/media/catalog/product/cache/8ba85772601582a264183d0a493354f1/f/f/ff20gh005jsmo_rust_2_.jpg" />
+        <Image src="https://www.globaldesi.in/media/catalog/product/cache/8ba85772601582a264183d0a493354f1/f/f/ff20gh010ajsry-mustard-_5__1.jpg" />
         <Image src="https://www.globaldesi.in/media/catalog/product/cache/8ba85772601582a264183d0a493354f1/f/f/ff20gh001ajsrl_wine_1_.jpg" />
+
+
       </Image.Group>
         <Divider/>
           <Header className="home-one-h1">Shop Dress!</Header>
