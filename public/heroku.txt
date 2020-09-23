@@ -1,0 +1,18 @@
+1.) "npm install serve --s" in my terminal
+
+"scripts": {
+"dev": "react-scripts start",
+"start": "serve -s build",
+"build": "react-scripts build",
+"test": "react-scripts test --env=jsdom",
+"eject": "react-scripts eject",
+"heroku-postbuild": "npm run build"
+}
+
+2.) copied the above code("scripts") in place of my previous code "scripts" in my package.json file
+3.) git commit -am "new update"
+4.) git push heroku master
+
+// this set up is for HerokuApp
+// if you want to start the server locally then replace Start value to
+{start: "react-scripts start"}
